@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T16:50:32.500566+00:00",
+  "generated_at": "2026-10-27T16:51:21.850055+00:00",
   "method": "Financial-topic RSS background leads; heuristic relevance (not video or AI fact checking)",
   "items": [
     {
@@ -12,6 +12,18 @@
       "published_at": "2026-10-27T09:42:02+00:00",
       "score": 83,
       "angle": "这对普通人的资产配置有什么实际影响？适用条件和主要风险是什么？",
+      "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
+    },
+    {
+      "title": "诚邀参与|2026年全国公募基金投资者调查问卷 - 新浪财经",
+      "category": "理财投资/财经",
+      "topic_track": "市场与经济热点",
+      "content_type": "新闻背景参考",
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNVlBUbTNBbnZGb202SG9TUmN5cHl3TXdlOV9PUk5JUUtqdmYxbXNCSkJoX3pXUUdEUThqNEdmNWUxMzQtLUVzMWsxLXBnLVJPMVhBZTVSYW9oUnpwbzY5TEFSR1R5cDEzdmdMQTN3RXEyZHFOYzgtb3ppRlJ0S05Jd3dhbEJXMEE?oc=5",
+      "published_at": "2026-10-27T02:45:24+00:00",
+      "score": 76,
+      "angle": "事件背后的驱动因素是什么？哪些数据能验证市场判断？",
       "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
     },
     {
@@ -51,18 +63,6 @@
       "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
     },
     {
-      "title": "美股收盘：Anthropic上市申请重燃AI投资热情，三大指数收高，芯片股领涨 - 加美财经",
-      "category": "理财投资/财经",
-      "topic_track": "股票与公司分析",
-      "content_type": "新闻背景参考",
-      "source": "加美财经",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1DZG50V0xyNEdwTmFZcU9CeW9vTl9xdXBVOVRpVUk4RFB3LUM0N01VMmpqOS1qT2gwdlZhWUlNeGtybnh5RzNBcTIxb3FzNkY4MnllSVg5dkVWQQ?oc=5",
-      "published_at": "2026-10-26T20:30:49+00:00",
-      "score": 69,
-      "angle": "公司的盈利与竞争力受到什么影响？市场预期和估值是否匹配？",
-      "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
-    },
-    {
       "title": "钧崴电子（301458）2026年三季报简析：营收净利润同比双双增长，公司应收账款体量较大_财报季 - 证券之星",
       "category": "理财投资/财经",
       "topic_track": "股票与公司分析",
@@ -70,18 +70,6 @@
       "source": "证券之星",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1CZ0dJZFRLNEFOMVBxZmVMclVlaXJTdWpYZkdBSlRiYnhIMkh2TUI2a1B5VjZLSG8wR1hnSDBJd3hNXzZGZWtfV2VSWm1yNnF5MFNxOGxmbFMyNVBhZUN3eg?oc=5",
       "published_at": "2026-10-26T22:11:59+00:00",
-      "score": 69,
-      "angle": "公司的盈利与竞争力受到什么影响？市场预期和估值是否匹配？",
-      "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
-    },
-    {
-      "title": "10月超级财报周：美联储会议+科技巨头财报，如何把握机会？ - EBC Financial Group",
-      "category": "理财投资/财经",
-      "topic_track": "股票与公司分析",
-      "content_type": "新闻背景参考",
-      "source": "EBC Financial Group",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9iQS1XTHhTeWIwYndUNmF6QjF1a0YwU25UZDBYVUlmTmtUMGx1NzJtM1M2WVJmMkV1WWctMWtZM2lnVElyRWRVM1JBWGJ1cHNZNHdSNzhlaDM?oc=5",
-      "published_at": "2026-10-27T05:39:00+00:00",
       "score": 69,
       "angle": "公司的盈利与竞争力受到什么影响？市场预期和估值是否匹配？",
       "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
@@ -120,30 +108,6 @@
       "published_at": "2026-10-27T09:20:42+00:00",
       "score": 69,
       "angle": "事件背后的驱动因素是什么？哪些数据能验证市场判断？",
-      "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
-    },
-    {
-      "title": "中信金属2026年三季报：投资与贸易业务共振，加权ROE突破15%_公司新闻 - 证券之星",
-      "category": "理财投资/财经",
-      "topic_track": "市场与经济热点",
-      "content_type": "新闻背景参考",
-      "source": "证券之星",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1jLXk0YkVVTVhpZjNsTjVNbFRIMzhCQ2ozQ3lMQkVRekdRek5Hbks5SXRKcV9EXzZ1RTAzbWg5d2g0THhmeXFXVl96X3JXeUZ1eF9ldTNvUGJCcF9lVTF2ajJ3?oc=5",
-      "published_at": "2026-10-27T10:18:49+00:00",
-      "score": 69,
-      "angle": "事件背后的驱动因素是什么？哪些数据能验证市场判断？",
-      "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
-    },
-    {
-      "title": "CMS能源2026年第三季度财报：NorthStar费用拖累GAAP每股收益 - TradingKey",
-      "category": "理财投资/财经",
-      "topic_track": "股票与公司分析",
-      "content_type": "新闻背景参考",
-      "source": "TradingKey",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9MbFF0WmU4WC1qcWlqVDl0dXRMVXNOVGtjMm4xWEFNUjI4cGFTZXBnbnljTXdBdnpYekpVRGJRSndaVHBMcTZYSTZHbHN2MFlBelJtNTdaUnp1TVJfUXo1Qi1Kc254a0dMajV2ejIwLU1fR2lrUVluaw?oc=5",
-      "published_at": "2026-10-27T10:42:52+00:00",
-      "score": 69,
-      "angle": "公司的盈利与竞争力受到什么影响？市场预期和估值是否匹配？",
       "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
     },
     {
@@ -471,18 +435,6 @@
       "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
     },
     {
-      "title": "Anthropic(ANT.US)正式公开IPO招股书：营收增长迅猛，1.5万亿美元估值能否经受AI投资回报考验？ - 证券之星",
-      "category": "理财投资/财经",
-      "topic_track": "股票与公司分析",
-      "content_type": "新闻背景参考",
-      "source": "证券之星",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1lZGR3MFRqQkpSdlRVc0NHR2VpdThzU3NVbVFMb3RtNUdCVUFkemhwRzBRMFN3VTBjTGtGN1VuUWtnaGMtSXJvWThKajd1NUtmcnA4MUlCdkVmajcwZ29Veg?oc=5",
-      "published_at": "2026-10-26T13:46:14+00:00",
-      "score": 59,
-      "angle": "公司的盈利与竞争力受到什么影响？市场预期和估值是否匹配？",
-      "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
-    },
-    {
       "title": "美股盘中追踪 | Azitra现涨123.07% - 富途牛牛",
       "category": "理财投资/财经",
       "topic_track": "股票与公司分析",
@@ -492,18 +444,6 @@
       "published_at": "2026-10-26T18:00:00+00:00",
       "score": 55,
       "angle": "公司的盈利与竞争力受到什么影响？市场预期和估值是否匹配？",
-      "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
-    },
-    {
-      "title": "国投瑞银大类资产配置周报 - 手机新浪网",
-      "category": "理财投资/财经",
-      "topic_track": "个人理财与资产配置",
-      "content_type": "新闻背景参考",
-      "source": "手机新浪网",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNcXAyX0ZjUGdFcHVzMEgtTUsyYW5nZDJpd3h2ZlFObWRJRk1vWkd5ZGc4Mlp3NnBJU0NTYklXMlk2eWg1VlctS2ZfU0k0c3o4d3NYaHF6OGJqeDNYcVVQWDZzTjRYQlNlYlRqSVhpWjJzYmpWQTBqcEtuZFM1a3F3bTRPcw?oc=5",
-      "published_at": "2026-10-27T02:04:00+00:00",
-      "score": 55,
-      "angle": "这对普通人的资产配置有什么实际影响？适用条件和主要风险是什么？",
       "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
     },
     {
@@ -543,18 +483,6 @@
       "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
     },
     {
-      "title": "恒指跌逾1%，关注港股通互联网ETF国联 - 手机新浪网",
-      "category": "理财投资/财经",
-      "topic_track": "个人理财与资产配置",
-      "content_type": "新闻背景参考",
-      "source": "手机新浪网",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQZXYzektNeFE4WFhEN3gxMWdpeDJIRmNHdkRkSVg0ZXpUQzdwWkdmNEl0ekRnUlNYTHpGQ1RXdUVZQ0JjSDJ3bkxPOU96WTdqMnRiTGNZUGxfczVoVXI3TWltWGdtRnpQU3Y1NVBNaWtzX3ZiWU5GQm9Ebzl0V0J3Q2xJUmpwOXdBTV8zRHllQXdPRHNEdEE?oc=5",
-      "published_at": "2026-10-27T09:43:00+00:00",
-      "score": 55,
-      "angle": "这对普通人的资产配置有什么实际影响？适用条件和主要风险是什么？",
-      "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
-    },
-    {
       "title": "创业板指数下跌1.71%，创业板ETF平安(159964)近10个交易日净流入1822.02万元 - 手机新浪网",
       "category": "理财投资/财经",
       "topic_track": "个人理财与资产配置",
@@ -579,18 +507,6 @@
       "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
     },
     {
-      "title": "美股异动丨光通信概念股普涨，MaxLinear涨超7% - 富途牛牛",
-      "category": "理财投资/财经",
-      "topic_track": "股票与公司分析",
-      "content_type": "新闻背景参考",
-      "source": "富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOY3R2ZndHY1paMHRtWWVpMlZEX25BM2MxOW4xNHZhR09hcnFUMW1ScW05dHRnYUc2b1YzRGtGeXY5TXgtTy1aX3p4ZFFDeUl0OGxRR055LXd0Q1VQSEtIZ2MteklqS0lXWHBUeUJXT1d3MGxWa3FyTm1TWDVMZXQ1Ump0QVd0MTE2LUJFUVB1VGd1NTVvMUU5cGFtbmxtQzJnLWM3cmh5U2JQY2pOQy16OVZTdU9UTHVU?oc=5",
-      "published_at": "2026-10-27T14:46:17+00:00",
-      "score": 55,
-      "angle": "公司的盈利与竞争力受到什么影响？市场预期和估值是否匹配？",
-      "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
-    },
-    {
       "title": "2026世界投资者周 | 警惕 AI 变脸！别让 “高科技” 骗了你的钱袋子 - 手机新浪网",
       "category": "理财投资/财经",
       "topic_track": "市场与经济热点",
@@ -603,12 +519,12 @@
       "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
     },
     {
-      "title": "中国购物中心十年：为什么好商场未必是好投资？ - 36氪",
+      "title": "中国购物中心十年：为什么好商场未必是好投资？-36氪 - 36kr",
       "category": "理财投资/财经",
       "topic_track": "市场与经济热点",
       "content_type": "新闻背景参考",
-      "source": "36氪",
-      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1Wd0k1cDJ1d2Q3M28zNjZzaG9sRmFaVmNDUWFYY0ZFbjZvMmlRcXdWQTdfS19YcXg4ekNMaFQxdDRMOTRWZXY5aXJ6SkkxZw?oc=5",
+      "source": "36kr",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5jaXpnaG1rcHFENE1yeVlsM0RNS1BabHVRMG5WcFhwWEJwTUF4UHNLRl9SbUxiOE1JZGJWeDBpcHhSdk5ONDZ4dEVBWVdtVnFa?oc=5",
       "published_at": "2026-10-26T11:12:00+00:00",
       "score": 52,
       "angle": "事件背后的驱动因素是什么？哪些数据能验证市场判断？",
@@ -700,5 +616,6 @@
     }
   ],
   "errors": [],
+  "data_stale": false,
   "coverage": "理财投资与财经背景线索，需核对来源；不以搜索词直接决定分类"
 }
