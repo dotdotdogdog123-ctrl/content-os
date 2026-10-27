@@ -138,10 +138,13 @@ def youtube_recent(name, channel_id):
     url = "https://www.youtube.com/feeds/videos.xml?channel_id=" + channel_id
     root = ET.fromstring(request_bytes(url))
     ns = {"atom": "http://www.w3.org/2005/Atom",
-          "yt": "http://www.youtube.com/xml/schemas/2015"}
-    actual_channel = root.findtext("yt:channelId", "", ns)
-    if actual_channel and actual_channel != channel_id:
-        raise ValueError("feed channel ID mismatch len=" + str(len(actual_channel)) + " prefix=" + repr(actual_channel[:8]))
+          "yt": "http://www.youtube.com/xml/schemas/2015",
+          "media": "http://search.yahoo.com/mrss/"}
+    actual_channel = root.findtext("yt:channelId", "", ns).strip()
+    # Some feed variants return a prefixed identifier. The stable 22-char
+    # channel payload must still agree with the configured public channel ID.
+    if actual_channel and not actual_channel.endswith(channel_id[2:]):
+        raise ValueError("feed channel ID mismatch")
     entries = root.findall("atom:entry", ns)
     items = []
     for entry in entries:
@@ -160,6 +163,13 @@ def youtube_recent(name, channel_id):
         item = base_item(title, track, "YouTube", "YouTube 频道官方 Atom RSS",
                          name, "https://www.youtube.com/watch?v=" + identifier, published)
         if item is not None:
+            # Some official Atom feeds expose view counts in Media RSS.
+            # Never interpret starRating count as likes or infer comments.
+            stats = entry.find("media:group/media:community/media:statistics", ns)
+            if stats is not None:
+                item["metrics"]["views"] = count(stats.get("views"))
+                if item["metrics"]["views"] is not None:
+                    item["view_metric_source"] = "YouTube 官方 Atom media:statistics"
             items.append(item)
     return len(entries), items
 
@@ -300,7 +310,7 @@ def main():
         "items": results, "errors": errors, "source_stats": source_stats,
         "quality": quality_report(results, source_stats), "data_stale": False,
         "coverage": "创作者观察名单，不是全网视频搜索或热榜；视频形式仅由标题推断；未人工核验。",
-        "metric_note": "YouTube RSS 无播放/互动数据；可选官方 Data API 获取播放、赞、评论。B站可得点赞/评论/收藏/分享。不同口径的互动率不可跨平台比较。",
+        "metric_note": "YouTube RSS 可能提供播放量（media:statistics），但不提供可直接计算互动率的完整赞/评论；可选官方 Data API 获取公开统计。B站可得点赞/评论/收藏/分享。不同口径不可跨平台比较。",
         "heat_note": "同平台、同发布时间分组(0-7/8-30/31-180天)至少3条有播放量视频时，播放量/组内中位数；仅为样本内相对值，不是平台全站热度。",
     }
     path.write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
