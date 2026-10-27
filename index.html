@@ -27,9 +27,10 @@ const RADAR_TRACKS=[
 ];
 function radarNormalize(x){
  if(!x||typeof x.title!=="string")return null;
- const title=x.title;
- if(/单位净值|累计净值|净值增长率|基金净值|最新净值|股票股价[_\s]|股价行情[_\s]|每日行情|实时行情|申购赎回清单|基金经理变更公告/.test(title))return null;
+ const title=x.title.replace(/\s+-\s+[^-]{1,35}$/,"");
+ if(/单位净值|累计净值|净值增长率|基金净值|最新净值|股票股价[_\s]|股价行情[_\s]|每日行情|实时行情|申购赎回清单|基金经理变更公告|基金转换业务|开通基金转换/.test(title))return null;
  if(/人工智能|机器人|世界模型|\bAI\b|Agent|大模型/i.test(title)&&!/投资|金融|财经|股票|股价|股市|财报|营收|利润|市值|估值|上市|资本市场|基金|银行|经济|货币|降息|美联储|商业模式|证券|融资|资产/.test(title))return null;
+ if(/投资人/.test(title)&&!/股票|股市|上市|财报|估值|理财|基金|分红|债券|央行|美联储/.test(title))return null;
  let inferred=RADAR_TRACKS.find(pair=>pair[1].test(title));
  if(!inferred)return null;
  const allowed=RADAR_TRACKS.some(pair=>pair[0]===x.topic_track);
