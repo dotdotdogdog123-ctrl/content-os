@@ -34,6 +34,24 @@ MATCH_TERMS = ("投资", "投資", "理财", "理財", "财经", "財經", "股�
                "基金", "估值", "经济", "經濟", "金融", "股市", "财报", "財報",
                "收益", "资产配置", "資產配置", "美股", "ETF", "降息")
 METRIC_KEYS = ("views", "likes", "comments", "favorites", "shares")
+# Reject generic entertainment/business headlines where a weak keyword like
+# "收购" or "暴涨" alone created a false investment recommendation.
+STRONG_FINANCE = re.compile(
+    r"投资|投資|理财|理財|股票|股市|股价|股價|台股|臺股|港股|美股|"
+    r"ETF|基金|财报|財報|估值|市值|股息|分红|分紅|回购|回購|"
+    r"债券|債券|美债|美債|国债|國債|黄金|黃金|利率|降息|升息|加息|"
+    r"美联储|聯準會|关税|關稅|金融危机|金融危機|貨幣|通膨|通胀|"
+    r"GDP|经济|經濟|资产|資產|證券|证券|央行|银行|銀行|"
+    r"公司分析|商业模式|商業模式|盈利|營收|营收|净利润|淨利", re.I
+)
+WEAK_ONLY = re.compile(r"收购|收購|并购|併購|暴涨|暴漲|暴跌|赚钱|賺錢|亏钱|虧錢|消费|消費")
+
+
+def video_track(title):
+    track = classify(title)
+    if track and WEAK_ONLY.search(title) and not STRONG_FINANCE.search(title):
+        return None
+    return track
 
 
 def request_bytes(url, accept="application/xml"):
@@ -107,7 +125,7 @@ def bilibili_item(video, source):
     if not isinstance(video, dict):
         return None
     title = html.unescape(re.sub(r"<[^>]+>", "", str(video.get("title") or ""))).strip()
-    track = classify(title)
+    track = video_track(title)
     bvid = str(video.get("bvid") or "")
     if not track or not re.fullmatch(r"BV[0-9A-Za-z]{10}", bvid):
         return None
@@ -149,7 +167,7 @@ def youtube_recent(name, channel_id):
     items = []
     for entry in entries:
         title = html.unescape(entry.findtext("atom:title", "", ns)).strip()
-        track = classify(title)
+        track = video_track(title)
         identifier = entry.findtext("yt:videoId", "", ns)
         if not track or not re.fullmatch(r"[0-9A-Za-z_-]{11}", identifier):
             continue
