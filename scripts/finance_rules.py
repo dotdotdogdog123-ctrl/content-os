@@ -10,7 +10,7 @@ LOW_VALUE = re.compile(
     r"基金份额净值|份额净值|基金产品档案|"
     r"股票股价[_\s]|股价行情[_\s]|行情_讨论_资讯|"
     r"每日行情|实时行情|行情中心|申购赎回清单|"
-    r"基金经理变更公告|基金销售公告|基金资产净值公告|"
+    r"基金经理变更公告|基金销售公告|基金资产净值公告|基金转换业务|开通基金转换|"
     r"行情报价_交易|行情数据中心"
 )
 TOPICS = (
@@ -27,10 +27,12 @@ FINANCE_CONTEXT = re.compile(
 
 def classify(title):
     """Return a finance subtopic or None; reject generic noise."""
-    title = str(title or "").strip()
+    title = re.sub(r"\s+-\s+[^-]{1,35}$", "", str(title or "").strip())
     if not title or LOW_VALUE.search(title):
         return None
     if re.search(r"人工智能|机器人|世界模型|\bAI\b|Agent|大模型", title, re.I) and not FINANCE_CONTEXT.search(title):
+        return None
+    if "投资人" in title and not re.search(r"股票|股市|上市|财报|估值|理财|基金|分红|债券|央行|美联储", title):
         return None
     for subtopic, pattern in TOPICS:
         if re.search(pattern, title, re.I):
