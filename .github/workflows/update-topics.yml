@@ -1,0 +1,29 @@
+name: Update daily topic radar
+on:
+  schedule:
+    - cron: '15 1,9 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: content-os-topic-radar
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch public RSS topics
+        run: python scripts/update_topics.py
+      - name: Commit updated topics
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/topics.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: refresh topic radar"
+            git push
+          fi
