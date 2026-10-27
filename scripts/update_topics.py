@@ -5,9 +5,12 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path
 
 QUERIES = [
- ("财经价值投资", "上市公司 财报 业绩 商业模式"),
+ ("财经价值投资", "site:bilibili.com/video 价值投资 股票"),
+ ("财经价值投资", "site:bilibili.com/video 投资 估值 商业模式"),
+ ("财经价值投资", "site:douyin.com/video 价值投资 财经"),
+ ("财经价值投资", "site:xiaohongshu.com/explore 价值投资 财经"),
  ("财经价值投资", "港股 消费 公司 估值"),
- ("财经价值投资", "泡泡玛特 茅台 投资"),
+ ("财经价值投资", "价值投资 投资观点 争议 股票"),
  ("AI科技访谈", "人工智能 大模型 Agent 具身智能"),
  ("AI科技访谈", "AI 科学研究 机器人 世界模型"),
 ]
