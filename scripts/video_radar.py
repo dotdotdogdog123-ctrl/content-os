@@ -29,6 +29,7 @@ YOUTUBE_CHANNELS = (
     ("游庭皓的財經皓角", "UC0lbAQVpenvfA2QqzsRtL_g"),
     ("懶錢包 Lazy Wallet", "UChYg2EINv5URVkebzlTGbFQ"),
     ("老王愛說笑", "UCvnLmiWt_zIVIh0zUm_j4Hw"),
+    ("投資好朋友 BOS價值投資", "UCT-EAA2q6A02iankuVsdL1w"),
 )
 MATCH_TERMS = ("投资", "投資", "理财", "理財", "财经", "財經", "股票", "股價",
                "基金", "估值", "经济", "經濟", "金融", "股市", "财报", "財報",
