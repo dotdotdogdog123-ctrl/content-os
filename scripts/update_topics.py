@@ -85,13 +85,27 @@ def main():
                 })
         except Exception as exc:
             errors.append(type(exc).__name__ + ": " + str(exc)[:130])
+    if not items and errors:
+        old_path = Path("data/topics.json")
+        if old_path.exists():
+            try:
+                old = json.loads(old_path.read_text(encoding="utf-8"))
+                if old.get("items"):
+                    old["last_attempt_at"] = NOW.isoformat()
+                    old["errors"] = errors
+                    old["data_stale"] = True
+                    old_path.write_text(json.dumps(old, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+                    print("RSS unavailable; retained old background items:", len(old["items"]))
+                    return
+            except (OSError, ValueError):
+                pass
     items.sort(key=lambda item: (-item["score"], item["published_at"]))
     path = Path("data/topics.json")
     path.parent.mkdir(parents=True, exist_ok=True)
     result = {
         "generated_at": NOW.isoformat(),
         "method": "Financial-topic RSS background leads; heuristic relevance (not video or AI fact checking)",
-        "items": items[:90], "errors": errors,
+        "items": items[:90], "errors": errors, "data_stale": bool(errors and not items),
         "coverage": "理财投资与财经背景线索，需核对来源；不以搜索词直接决定分类",
     }
     path.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
