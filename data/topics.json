@@ -52,18 +52,6 @@
       "content_type": "新闻背景参考"
     },
     {
-      "title": "腾讯云TVP走进vivo，共启端侧到具身的万物智能 - 人工智能",
-      "category": "理财投资/财经",
-      "source": "人工智能",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9UdkE3d2NYNm1vc01RSjFYT0hpcU1TSElBNm1LNnQzYmtyb3dZWm1pa1k1NVJfY1NsSzZqUFk0TVJxUTVPdjdVc3REQWtCd2tsb0E?oc=5",
-      "published_at": "2026-10-27T09:16:00+00:00",
-      "score": 68,
-      "angle": "这是技术能力突破，还是商业化进展？还有哪些尚未解决的真实世界难题？",
-      "status": "历史财经背景线索；因公开新闻源当前不可用，尚待更新核实",
-      "topic_track": "股票与公司分析",
-      "content_type": "新闻背景参考"
-    },
-    {
       "title": "茶百道停牌「后遗症」：港股消费新股逻辑将重构？ - 手机新浪网",
       "category": "理财投资/财经",
       "source": "手机新浪网",
@@ -138,5 +126,5 @@
   ],
   "errors": [],
   "data_stale": true,
-  "coverage": "仅保留历史数据中符合财经投资主题的背景线索，非当日实时新闻或社交平台视频"
+  "coverage": "历史财经投资相关背景线索（已过滤明显无关项）；新闻源仍可能暂时不可用"
 }
