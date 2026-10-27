@@ -43,8 +43,27 @@ for cat,q in QUERIES:
    source=item.find("source"); source_name=clean(source.text if source is not None else "")
    items.append({"title":title,"category":cat,"source":source_name,"url":link,"published_at":published.isoformat(),"score":score(title,cat,published),"angle":angle(cat,title),"status":"待核实：新闻聚合来源，需核对原始报道和公司公告"})
  except Exception as e:errors.append(f"{cat}: {type(e).__name__}: {str(e)[:150]}")
+
+# Optional public Bilibili popular-video feed; never invent engagement counts.
+try:
+ req=urllib.request.Request("https://api.bilibili.com/x/web-interface/popular?pn=1&ps=50",headers={"User-Agent":"Mozilla/5.0","Referer":"https://www.bilibili.com/"})
+ with urllib.request.urlopen(req,timeout=16) as resp: bili=json.load(resp)
+ if bili.get("code")!=0: raise ValueError("Bilibili response code "+str(bili.get("code")))
+ terms=("投资","股票","财经","估值","商业","巴菲特","段永平","茅台","泡泡玛特","基金","财报","股市","经济")
+ for v in (bili.get("data") or {}).get("list",[]):
+  title=clean(v.get("title",""))
+  if not any(k in title for k in terms) or title.casefold() in seen:continue
+  bvid=v.get("bvid")
+  if not re.fullmatch(r"BV[0-9A-Za-z]{10}",str(bvid)):continue
+  seen.add(title.casefold())
+  stat=v.get("stat") or {}
+  published=dt.datetime.fromtimestamp(int(v.get("pubdate") or v.get("ctime") or now.timestamp()),dt.timezone.utc)
+  items.append({"title":title,"category":"财经价值投资","content_type":"社交视频","platform":"B站","source":"B站公开热门列表","author":clean((v.get("owner") or {}).get("name","")),"url":"https://www.bilibili.com/video/"+bvid,"published_at":published.isoformat(),"score":score(title,"财经价值投资",published),"metrics":{"views":stat.get("view"),"likes":stat.get("like"),"comments":stat.get("reply"),"shares":stat.get("share"),"favorites":stat.get("favorite")},"angle":angle("财经价值投资",title),"status":"公开热门视频数据；热度为抓取时快照，需人工确认观点内容"})
+except Exception as e:
+ errors.append("B站公开热门视频: "+type(e).__name__+": "+str(e)[:150])
+
 items.sort(key=lambda x:(-x["score"],x["published_at"]))
-output={"generated_at":now.isoformat(),"method":"RSS news discovery + transparent heuristic scoring (not AI)","items":items[:60],"errors":errors}
+output={"generated_at":now.isoformat(),"method":"RSS news discovery + transparent heuristic scoring (not AI)","items":items[:90],"errors":errors}
 path=Path("data/topics.json");path.parent.mkdir(exist_ok=True)
 if not items and path.exists():
  old=json.loads(path.read_text(encoding="utf-8"))
