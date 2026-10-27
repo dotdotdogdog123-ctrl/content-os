@@ -1,72 +1,101 @@
 #!/usr/bin/env python3
-"""Public RSS topic discovery. No secrets or third-party dependencies."""
-import datetime as dt, json, re, urllib.request, urllib.parse, xml.etree.ElementTree as ET, html, os
+"""Finance-only news/background research feed, kept separate from verified videos."""
+import datetime as dt
+import html
+import json
+import re
+import urllib.parse
+import urllib.request
+import xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
 from pathlib import Path
+from finance_rules import CATEGORY, classify
 
+# Each query is a discovery lead, not proof that an item is relevant.
 QUERIES = [
- ("财经价值投资", "site:bilibili.com/video 价值投资 股票"),
- ("财经价值投资", "site:bilibili.com/video 投资 估值 商业模式"),
- ("财经价值投资", "site:douyin.com/video 价值投资 财经"),
- ("财经价值投资", "site:xiaohongshu.com/explore 价值投资 财经"),
- ("财经价值投资", "港股 消费 公司 估值"),
- ("财经价值投资", "价值投资 投资观点 争议 股票"),
- ("AI科技访谈", "人工智能 大模型 Agent 具身智能"),
- ("AI科技访谈", "AI 科学研究 机器人 世界模型"),
+    "个人理财 资产配置 投资 观点",
+    "指数基金 ETF 定投 争议",
+    "A股 港股 美股 投资 市场 热点",
+    "茅台 泡泡玛特 腾讯 公司 分析 估值",
+    "美联储 利率 黄金 汇率 理财 影响",
+    "巴菲特 段永平 投资 策略 观点",
+    "股票 商业模式 盈利 长期 投资",
+    "基金投资 风险 收益 投资者",
 ]
-def clean(s):
- return re.sub(r"\s+"," ",html.unescape(re.sub("<[^>]*>","",s or ""))).strip()
-def getfeed(query):
- url="https://news.google.com/rss/search?"+urllib.parse.urlencode({"q":query+" when:3d","hl":"zh-CN","gl":"CN","ceid":"CN:zh-Hans"})
- req=urllib.request.Request(url,headers={"User-Agent":"ContentOS/0.2 (+public RSS reader)"})
- with urllib.request.urlopen(req,timeout=18) as r:
-  return ET.fromstring(r.read(1500000))
-def score(title,category,published):
- keywords=("财报","利润","营收","估值","融资","上市","业绩","模型","Agent","机器人","具身","AI","芯片","收购","增长","商业化")
- relevance=sum(1 for k in keywords if k.lower() in title.lower())
- age=max(0,(dt.datetime.now(dt.timezone.utc)-published).total_seconds()/3600)
- return min(95,35+min(35,relevance*8)+(25 if age<24 else 15 if age<48 else 5))
-def angle(cat,title):
- if cat=="财经价值投资": return "这条消息会怎样改变公司的长期盈利能力？市场价格已经反映了多少预期？"
- return "这是技术能力突破，还是商业化进展？还有哪些尚未解决的真实世界难题？"
-now=dt.datetime.now(dt.timezone.utc); items=[]; seen=set(); errors=[]
-for cat,q in QUERIES:
- try:
-  root=getfeed(q)
-  for item in root.findall(".//item")[:15]:
-   title=clean(item.findtext("title")); link=clean(item.findtext("link"))
-   if not title or not link or title.casefold() in seen:continue
-   try: published=parsedate_to_datetime(item.findtext("pubDate")).astimezone(dt.timezone.utc)
-   except Exception:continue
-   if (now-published).total_seconds()>72*3600:continue
-   seen.add(title.casefold())
-   source=item.find("source"); source_name=clean(source.text if source is not None else "")
-   items.append({"title":title,"category":cat,"source":source_name,"url":link,"published_at":published.isoformat(),"score":score(title,cat,published),"angle":angle(cat,title),"status":"待核实：新闻聚合来源，需核对原始报道和公司公告"})
- except Exception as e:errors.append(f"{cat}: {type(e).__name__}: {str(e)[:150]}")
+NOW = dt.datetime.now(dt.timezone.utc)
 
-# Optional public Bilibili popular-video feed; never invent engagement counts.
-try:
- req=urllib.request.Request("https://api.bilibili.com/x/web-interface/popular?pn=1&ps=50",headers={"User-Agent":"Mozilla/5.0","Referer":"https://www.bilibili.com/"})
- with urllib.request.urlopen(req,timeout=16) as resp: bili=json.load(resp)
- if bili.get("code")!=0: raise ValueError("Bilibili response code "+str(bili.get("code")))
- terms=("投资","股票","财经","估值","商业","巴菲特","段永平","茅台","泡泡玛特","基金","财报","股市","经济")
- for v in (bili.get("data") or {}).get("list",[]):
-  title=clean(v.get("title",""))
-  if not any(k in title for k in terms) or title.casefold() in seen:continue
-  bvid=v.get("bvid")
-  if not re.fullmatch(r"BV[0-9A-Za-z]{10}",str(bvid)):continue
-  seen.add(title.casefold())
-  stat=v.get("stat") or {}
-  published=dt.datetime.fromtimestamp(int(v.get("pubdate") or v.get("ctime") or now.timestamp()),dt.timezone.utc)
-  items.append({"title":title,"category":"财经价值投资","content_type":"社交视频","platform":"B站","source":"B站公开热门列表","author":clean((v.get("owner") or {}).get("name","")),"url":"https://www.bilibili.com/video/"+bvid,"published_at":published.isoformat(),"score":score(title,"财经价值投资",published),"metrics":{"views":stat.get("view"),"likes":stat.get("like"),"comments":stat.get("reply"),"shares":stat.get("share"),"favorites":stat.get("favorite")},"angle":angle("财经价值投资",title),"status":"公开热门视频数据；热度为抓取时快照，需人工确认观点内容"})
-except Exception as e:
- errors.append("B站公开热门视频: "+type(e).__name__+": "+str(e)[:150])
+def clean(value):
+    return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]*>", "", str(value or "")))).strip()
 
-items.sort(key=lambda x:(-x["score"],x["published_at"]))
-output={"generated_at":now.isoformat(),"method":"RSS news discovery + transparent heuristic scoring (not AI)","items":items[:90],"errors":errors}
-path=Path("data/topics.json");path.parent.mkdir(exist_ok=True)
-if not items and path.exists():
- old=json.loads(path.read_text(encoding="utf-8"))
- if old.get("items"): print("No new items; retaining last successful feed");raise SystemExit(0)
-path.write_text(json.dumps(output,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-print(f"Discovered {len(items)} topics; errors: {len(errors)}")
+def feed(query):
+    url = "https://news.google.com/rss/search?" + urllib.parse.urlencode({
+        "q": query + " when:3d", "hl": "zh-CN", "gl": "CN", "ceid": "CN:zh-Hans"
+    })
+    request = urllib.request.Request(url, headers={
+        "User-Agent": "ContentOS/0.4 (+public RSS research reader)"
+    })
+    with urllib.request.urlopen(request, timeout=18) as response:
+        return ET.fromstring(response.read(1500000))
+
+def research_question(subtopic):
+    return {
+        "个人理财与资产配置": "这对普通人的资产配置有什么实际影响？适用条件和主要风险是什么？",
+        "股票与公司分析": "公司的盈利与竞争力受到什么影响？市场预期和估值是否匹配？",
+        "投资方法论": "这套观点的前提和反例是什么？哪些投资者可能不适用？",
+        "市场与经济热点": "事件背后的驱动因素是什么？哪些数据能验证市场判断？",
+    }.get(subtopic, "有哪些可靠证据与相反观点？")
+
+def main():
+    items, seen, errors = [], set(), []
+    for query in QUERIES:
+        try:
+            root = feed(query)
+            for node in root.findall(".//item")[:20]:
+                title = clean(node.findtext("title"))
+                link = clean(node.findtext("link"))
+                if not title or not link:
+                    continue
+                subtopic = classify(title)
+                if subtopic is None:
+                    continue
+                key = re.sub(r"\s*[-—|]\s*[^-—|]+$", "", title).strip().casefold()
+                if key in seen:
+                    continue
+                try:
+                    published = parsedate_to_datetime(node.findtext("pubDate")).astimezone(dt.timezone.utc)
+                except (TypeError, ValueError, AttributeError):
+                    continue
+                age = (NOW - published).total_seconds() / 3600
+                if age < -2 or age > 72:
+                    continue
+                seen.add(key)
+                source = node.find("source")
+                relevance = sum(term.lower() in title.lower() for term in (
+                    "理财", "投资", "基金", "股票", "市场", "财经", "财报",
+                    "估值", "收益", "黄金", "债券", "美联储", "公司"
+                ))
+                score = min(90, 30 + min(30, relevance * 7) + (25 if age < 24 else 15 if age < 48 else 5))
+                items.append({
+                    "title": title, "category": CATEGORY, "topic_track": subtopic,
+                    "content_type": "新闻背景参考",
+                    "source": clean(source.text if source is not None else ""),
+                    "url": link, "published_at": published.isoformat(),
+                    "score": score, "angle": research_question(subtopic),
+                    "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议",
+                })
+        except Exception as exc:
+            errors.append(type(exc).__name__ + ": " + str(exc)[:130])
+    items.sort(key=lambda item: (-item["score"], item["published_at"]))
+    path = Path("data/topics.json")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    result = {
+        "generated_at": NOW.isoformat(),
+        "method": "Financial-topic RSS background leads; heuristic relevance (not video or AI fact checking)",
+        "items": items[:90], "errors": errors,
+        "coverage": "理财投资与财经背景线索，需核对来源；不以搜索词直接决定分类",
+    }
+    path.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print("Finance background items:", len(result["items"]), "feed errors:", len(errors))
+
+if __name__ == "__main__":
+    main()
