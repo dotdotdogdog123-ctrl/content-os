@@ -75,13 +75,17 @@ async function loadRadar(){
  const q=videoMeta&&videoMeta.quality;
  const sources=videoMeta&&videoMeta.source_stats||[];
  const failures=sources.filter(x=>x.status==="failed").map(x=>x.source);
+ const emptySources=sources.filter(x=>x.status==="ok"&&x.matched_new===0).map(x=>x.source);
+ const verified=financeVideoItems.filter(x=>x.manually_verified===true).length;
  const withViews=financeVideoItems.filter(x=>x.metrics&&x.metrics.views!=null).length;
  const withRates=financeVideoItems.filter(x=>x.engagement_rate!=null).length;
  const inferred=financeVideoItems.filter(x=>x.format_evidence==="标题推断"||String(x.format||"").startsWith("标题推断")).length;
  $("radarQuality").innerHTML="<b>数据质量：</b>有播放量 "+withViews+"/"+videoCount+" · 有可计算互动率 "+withRates+"/"+videoCount+
-  " · 标题推断形式 "+inferred+" · 人工观看核验 0（当前无核验流程）"+
+  " · 标题推断形式 "+inferred+" · 人工观看核验 "+verified+"（当前无核验流程）"+
   (q?" · 成功来源 "+q.sources_ok+" / 失败 "+q.sources_failed:"")+
+  (emptySources.length?" · 零匹配来源 "+emptySources.length:"")+
   (failures.length?"<br>失败来源："+esc(failures.join("、")):"")+
+  (emptySources.length?"<br>未匹配视频："+esc(emptySources.join("、")):"")+
   "<br>注意：YouTube RSS 可能有播放量，但没有完整点赞/评论；缺失显示「未提供」，不补零。相对热度只在同平台、同发布时间分组至少3条有播放量视频时计算，不能当作全站热榜。";
  showRadar();
 }
