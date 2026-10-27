@@ -16,6 +16,12 @@ class FinanceVideoRadarTest(unittest.TestCase):
         self.assertEqual(classify("ETF定期定額理財有哪些風險"), "个人理财与资产配置")
         self.assertEqual(classify("聯準會降息如何影響台股"), "股票与公司分析")
 
+    def test_weak_keyword_false_positives(self):
+        self.assertIsNone(radar.video_track("内存暴涨，谁在哭谁在笑"))
+        self.assertIsNone(radar.video_track("史上最大现金收购案，富二代如何正确拼爹"))
+        self.assertEqual(radar.video_track("泡泡玛特股价暴跌，估值如何看"),
+                         "股票与公司分析")
+
     def test_format_is_only_title_inference(self):
         self.assertEqual(radar.format_guess("財經訪談：如何選股"), "访谈/对话")
         self.assertEqual(radar.format_guess("財報解讀：估值方法"), "讲解/科普")
