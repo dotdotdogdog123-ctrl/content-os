@@ -70,7 +70,7 @@ async function loadRadar(){
   " · 标题推断形式 "+inferred+" · 人工观看核验 0（当前无核验流程）"+
   (q?" · 成功来源 "+q.sources_ok+" / 失败 "+q.sources_failed:"")+
   (failures.length?"<br>失败来源："+esc(failures.join("、")):"")+
-  "<br>注意：RSS 不含 YouTube 互动量；缺失显示「未提供」，不补零。相对热度只在同平台、同发布时间分组至少3条有播放量视频时计算，不能当作全站热榜。";
+  "<br>注意：YouTube RSS 可能有播放量，但没有完整点赞/评论；缺失显示「未提供」，不补零。相对热度只在同平台、同发布时间分组至少3条有播放量视频时计算，不能当作全站热榜。";
  showRadar();
 }
 function metricDisplay(n){return n===null||n===undefined?"未提供":fmt(n)}
