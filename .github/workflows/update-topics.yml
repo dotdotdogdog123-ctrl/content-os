@@ -29,7 +29,15 @@ jobs:
       - name: Fetch public RSS topics
         run: python scripts/update_topics.py
       - name: Fetch public finance videos
+        env:
+          # Optional: add YOUTUBE_API_KEY as a repository secret for official public stats.
+          # Without it the official RSS discovery still runs; metrics remain null.
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python scripts/video_radar.py
+      - name: Validate generated JSON
+        run: |
+          python -m json.tool data/videos.json > /dev/null
+          python -m json.tool data/topics.json > /dev/null
       - name: Commit updated topics
         run: |
           git config user.name "github-actions[bot]"
