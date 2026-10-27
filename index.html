@@ -1,9 +1,9 @@
 <!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Content OS | 内容创作工作台</title>
 <style>:root{font-family:system-ui,"Microsoft YaHei",sans-serif;color:#e8eefb;background:#0e1422}*{box-sizing:border-box}body{margin:0}header{background:#151f33;padding:24px 5%;border-bottom:1px solid #303d54}h1{margin:0;font-size:29px}small,.muted{color:#9baac0}main{max-width:1150px;margin:auto;padding:22px}nav{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}button,input,select,textarea{font:inherit;border:1px solid #3a4963;background:#1b2940;color:#f1f5ff;border-radius:9px;padding:10px}button{cursor:pointer}button:hover,.active{background:#395c97}section{display:none}section.active{display:block}.card{background:#172237;border:1px solid #30405b;border-radius:15px;padding:18px;margin:12px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}.grid .card{margin:0}.number{font-size:27px;font-weight:700}.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.row>*{flex:1}label{display:block;margin:10px 0 5px}input,textarea,select{width:100%}textarea{min-height:85px}table{width:100%;border-collapse:collapse;font-size:14px}td,th{padding:10px;border-bottom:1px solid #344158;text-align:left}th{color:#aabcda}.scroll{overflow:auto}.tag{font-size:12px;border-radius:8px;background:#2c456b;padding:4px 7px}.note{border-left:3px solid #e0ad59;padding-left:12px;color:#d2d9e7}a{color:#a5c6ff}section:target{display:block!important}body:has(section:target) #dashboard:not(:target){display:none!important}nav a{color:#fff;padding:10px;display:inline-block}</style>
-<header><h1>Content OS <small>v0.4</small></h1><div class="muted">财经 · 价值投资 · 科技访谈｜选题、数据、研究，一站管理</div></header>
+<header><h1>Content OS <small>v0.6</small></h1><div class="muted">财经视频优先 · 理财投资 · 个股研究 · 价值投资方法论</div></header>
 <main><nav><button data-tab="dashboard" class="active">总览</button><a href="#topics" data-tab="topics">选题雷达</a><button data-tab="videos">视频复盘</button><button data-tab="research">公司研究</button><button data-tab="settings">备份与说明</button></nav>
 <section id="dashboard" class="active"><h2>工作台总览</h2><div class="grid"><div class="card">选题储备<div class="number" id="topicCount">0</div></div><div class="card">视频数量<div class="number" id="videoCount">0</div></div><div class="card">累计播放<div class="number" id="totalViews">0</div></div><div class="card">平均互动率<div class="number" id="avgEng">—</div></div></div><div class="card"><h3>从这里开始</h3><p>① 在选题雷达录入财经/科技选题并查看透明评分；② 在视频复盘输入真实数据；③ 建立公司研究与事实核查清单。</p><p class="note">本版本没有实时热点抓取或 AI 接口。评分与建议是启发式规则，不代表联网核查或 AI 实证归因。</p></div></section>
-<section id="topics"><h2>选题雷达</h2><div class="card"><h3>理财投资 / 财经内容雷达 <span class="tag">真实视频优先 · 严格分类</span></h3><p class="muted">聚焦理财、股票、投资方法和市场热点。默认只展示可验证视频；抓取不足时明确显示数量，不用新闻冒充视频。每天北京时间约 09:15、17:15 自动尝试更新。</p><div class="row"><div><label>内容方向</label><select id="radarFilter" onchange="showRadar()"><option value="all">全部财经方向</option><option>个人理财与资产配置</option><option>股票与公司分析</option><option>投资方法论</option><option>市场与经济热点</option></select></div><div><label>数据状态</label><p id="radarStatus" class="muted">正在加载……</p></div></div><label>来源类型</label><select id="radarKind" onchange="showRadar()"><option value="video" selected>社交平台视频（默认）</option><option value="news">新闻背景参考</option></select><button onclick="loadRadar()">刷新候选选题</button><div id="radarList"></div></div><div class="card"><div class="row"><div><label>选题标题</label><input id="topicTitle" placeholder="例：AI Agent 真正的商业化瓶颈是什么？"></div><div><label>内容类型</label><select id="topicType"><option>财经口播</option><option>科技访谈</option><option>视频播客</option></select></div></div><div class="row"><div><label>时效性（1-5）</label><input id="timely" type="number" min="1" max="5" value="3"></div><div><label>独特观点（1-5）</label><input id="novel" type="number" min="1" max="5" value="3"></div><div><label>证据充分度（1-5）</label><input id="evidence" type="number" min="1" max="5" value="3"></div></div><label>切入角度 / 新闻线索</label><textarea id="topicAngle"></textarea><button onclick="addTopic()">加入选题库</button><p class="muted">评分公式：时效性×25% + 独特观点×40% + 证据充分度×35%，满分100。</p></div><div id="topicList"></div></section>
+<section id="topics"><h2>选题雷达</h2><div class="card"><h3>理财投资 / 财经内容雷达 <span class="tag">真实视频优先 · 严格分类</span></h3><p class="muted">优先真实视频链接：财经口播、讲解科普、访谈对话、热点争议，兼顾个股研究与投资方法。视频形式均为<strong>标题推断</strong>或<strong>待人工核验</strong>，不是已观看确认。每天北京时间约 09:15、17:15 自动尝试更新。</p><div class="row"><div><label>内容方向</label><select id="radarFilter" onchange="showRadar()"><option value="all">全部财经方向</option><option>个人理财与资产配置</option><option>股票与公司分析</option><option>投资方法论</option><option>市场与经济热点</option></select></div><div><label>数据状态</label><p id="radarStatus" class="muted">正在加载……</p></div></div><label>来源类型</label><select id="radarKind" onchange="showRadar()"><option value="video" selected>社交平台视频（默认）</option><option value="news">新闻背景参考</option></select><div class="row"><div><label>平台</label><select id="radarPlatform" onchange="showRadar()"><option value="all">全部平台</option><option>B站</option><option>YouTube</option></select></div><div><label>视频形式（仅标题推断）</label><select id="radarFormat" onchange="showRadar()"><option value="all">全部形式</option><option>访谈/对话</option><option>讲解/科普</option><option>口播/观点</option><option>热点争议</option><option>形式待核验</option></select></div><div><label>数据完整度</label><select id="radarMetrics" onchange="showRadar()"><option value="all">不限</option><option value="views">有真实播放量</option><option value="engagement">有可计算互动率</option></select></div><div><label>排序</label><select id="radarSort" onchange="showRadar()"><option value="score">选题参考分</option><option value="recent">发布时间</option><option value="views">真实播放量</option><option value="heat">同平台样本相对热度</option></select></div></div><div id="radarQuality" class="note">正在读取来源质量……</div><p><button onclick="loadRadar()">刷新候选选题</button></p><div id="radarList"></div></div><div class="card"><div class="row"><div><label>选题标题</label><input id="topicTitle" placeholder="例：AI Agent 真正的商业化瓶颈是什么？"></div><div><label>内容类型</label><select id="topicType"><option>财经口播</option><option>投资方法论</option><option>个股研究</option><option>财经讲解科普</option><option>热点争议</option><option>科技访谈</option><option>视频播客</option></select></div></div><div class="row"><div><label>时效性（1-5）</label><input id="timely" type="number" min="1" max="5" value="3"></div><div><label>独特观点（1-5）</label><input id="novel" type="number" min="1" max="5" value="3"></div><div><label>证据充分度（1-5）</label><input id="evidence" type="number" min="1" max="5" value="3"></div></div><label>切入角度 / 新闻线索</label><textarea id="topicAngle"></textarea><button onclick="addTopic()">加入选题库</button><p class="muted">评分公式：时效性×25% + 独特观点×40% + 证据充分度×35%，满分100。</p></div><div id="topicList"></div></section>
 <section id="videos"><h2>视频数据复盘</h2><div class="card"><div class="row"><div><label>视频标题</label><input id="videoTitle"></div><div><label>平台</label><select id="platform"><option>抖音</option><option>视频号</option><option>小红书</option><option>小宇宙</option><option>B站</option></select></div><div><label>发布日期</label><input type="date" id="published"></div></div><div class="row"><div><label>播放量</label><input type="number" id="views" min="0" value="0"></div><div><label>点赞量</label><input type="number" id="likes" min="0" value="0"></div><div><label>评论量</label><input type="number" id="comments" min="0" value="0"></div><div><label>分享量</label><input type="number" id="shares" min="0" value="0"></div></div><button onclick="addVideo()">录入视频</button></div><div class="card"><h3>导入 CSV</h3><p class="muted">表头支持 title,platform,date,views,likes,comments,shares；也支持 标题,平台,日期,播放量,点赞量,评论量,分享量。适用于简单 CSV，不支持带嵌套引号的复杂 CSV。</p><input type="file" accept=".csv,text/csv" id="csv" onchange="importCSV(this)"></div><div class="card scroll"><table><thead><tr><th>视频标题</th><th>平台</th><th>播放量</th><th>互动率</th><th>表现提示</th><th></th></tr></thead><tbody id="videoList"></tbody></table></div><p class="note">互动率=(点赞+评论+分享)/播放量。高互动不等于高完播；仅凭这些指标无法确定爆款因果，需要补充曝光、点击、留存和同平台对照数据。</p></section>
 <section id="research"><h2>财经公司研究 & 事实核查</h2><div class="card"><label>公司 / 股票名称</label><input id="company" placeholder="例如：泡泡玛特"><label>研究核心假设</label><textarea id="thesis" placeholder="为什么认为公司具备长期价值？"></textarea><label>关键数据及出处 URL</label><textarea id="sources" placeholder="请记录公告日期、数据口径及可核验的原始链接"></textarea><label>反方论据与风险</label><textarea id="risks"></textarea><button onclick="addResearch()">保存研究卡</button></div><div id="researchList"></div><div class="card"><h3>口播事实核查清单</h3><p>核对数字对应的年份与币种、同比/环比口径、财报原文、人物言论的完整语境、估值假设以及预测和已实现业绩的区别。</p><p class="muted">当前不自动检索外部信息；未给出可靠原始出处前，不应将研究卡标为“已核实”。</p></div></section>
 <section id="settings"><h2>数据备份</h2><div class="card"><p>所有数据保存在本设备的当前浏览器 localStorage。换浏览器或清理浏览器数据可能丢失，因此请定期备份。公开部署的网页没有用户登录或云端同步。</p><button onclick="exportData()">导出 JSON 备份</button><label>恢复 JSON 备份</label><input type="file" accept=".json" onchange="restoreData(this)"></div></section>
@@ -32,8 +32,8 @@ function radarNormalize(x){
  if(/人工智能|机器人|世界模型|具身|智能体|端侧|\bAI\b|Agent|大模型/i.test(title)&&!/投资|金融|财经|股票|股价|股市|财报|营收|利润|市值|估值|上市|资本市场|基金|银行|经济|货币|降息|美联储|商业模式|证券|融资|资产/.test(title))return null;
  if(/投资人/.test(title)&&!/股票|股市|上市|财报|估值|理财|基金|分红|债券|央行|美联储/.test(title))return null;
  let inferred=RADAR_TRACKS.find(pair=>pair[1].test(title));
- if(!inferred)return null;
  const allowed=RADAR_TRACKS.some(pair=>pair[0]===x.topic_track);
+ if(!inferred&&!allowed)return null;
  return Object.assign({},x,{category:"理财投资/财经",topic_track:allowed?x.topic_track:inferred[0]});
 }
 async function loadRadar(){
@@ -57,19 +57,40 @@ async function loadRadar(){
   videoCount=financeVideoItems.length;
   if(videoMeta.errors&&videoMeta.errors.length)notes.push("部分视频来源未能访问");
   if(videoMeta.data_stale)notes.push("视频是上次成功抓取的快照");
+  if(videoMeta.generated_at)notes.push("视频快照 "+videoMeta.generated_at.slice(0,16).replace("T"," ")+" UTC");
  }catch(e){videoMeta=null;financeVideoItems=[];notes.push("视频数据读取失败："+e.message)}
- status.textContent="真实财经视频 "+videoCount+" 条 · 财经背景线索 "+newsCount+" 条"+(notes.length?" · "+notes.join("；"):"");
+ status.textContent="公开财经视频链接 "+videoCount+" 条 · 财经背景线索 "+newsCount+" 条"+(notes.length?" · "+notes.join("；"):"");
+ const q=videoMeta&&videoMeta.quality;
+ const sources=videoMeta&&videoMeta.source_stats||[];
+ const failures=sources.filter(x=>x.status==="failed").map(x=>x.source);
+ const withViews=financeVideoItems.filter(x=>x.metrics&&x.metrics.views!=null).length;
+ const withRates=financeVideoItems.filter(x=>x.engagement_rate!=null).length;
+ const inferred=financeVideoItems.filter(x=>x.format_evidence==="标题推断"||String(x.format||"").startsWith("标题推断")).length;
+ $("radarQuality").innerHTML="<b>数据质量：</b>有播放量 "+withViews+"/"+videoCount+" · 有可计算互动率 "+withRates+"/"+videoCount+
+  " · 标题推断形式 "+inferred+" · 人工观看核验 0（当前无核验流程）"+
+  (q?" · 成功来源 "+q.sources_ok+" / 失败 "+q.sources_failed:"")+
+  (failures.length?"<br>失败来源："+esc(failures.join("、")):"")+
+  "<br>注意：RSS 不含 YouTube 互动量；缺失显示「未提供」，不补零。相对热度只在同平台、同发布时间分组至少3条有播放量视频时计算，不能当作全站热榜。";
  showRadar();
 }
 function metricDisplay(n){return n===null||n===undefined?"未提供":fmt(n)}
 function showRadar(){
  const filter=val("radarFilter"),kind=val("radarKind");
+ const platform=val("radarPlatform"),format=val("radarFormat"),metric=val("radarMetrics"),sort=val("radarSort");
  const pool=kind==="video"?financeVideoItems:radarItems;
- visibleRadarRows=pool.filter(x=>filter==="all"||x.topic_track===filter).slice(0,60);
+ visibleRadarRows=pool.filter(x=>(filter==="all"||x.topic_track===filter)&&
+  (kind!=="video"||((platform==="all"||x.platform===platform)&&
+  (format==="all"||x.format===format||x.format==="标题推断："+format)&&
+  (metric==="all"||(metric==="views"&&x.metrics&&x.metrics.views!=null)||(metric==="engagement"&&x.engagement_rate!=null))));
+ const numeric=x=>Number.isFinite(Number(x))?Number(x):-1;
+ visibleRadarRows.sort((a,b)=>sort==="recent"?String(b.published_at||"").localeCompare(String(a.published_at||"")):
+  sort==="views"?numeric(b.metrics&&b.metrics.views)-numeric(a.metrics&&a.metrics.views):
+  sort==="heat"?numeric(b.platform_heat_ratio)-numeric(a.platform_heat_ratio):numeric(b.score)-numeric(a.score));
+ visibleRadarRows=visibleRadarRows.slice(0,120);
  const list=$("radarList");if(!list)return;
  if(!visibleRadarRows.length){
   list.innerHTML=kind==="video"?
-   '<div class="note"><b>当前没有符合筛选条件的财经视频。</b><p>已扩展公开 B站财经分区来源，但平台是否提供可用数据仍待下一次任务运行验证。没有用新闻文章冒充视频；可切换「新闻背景参考」查看财经事件线索。</p></div>':
+   '<div class="note"><b>当前没有符合筛选条件的财经视频。</b><p>请切换平台、形式或数据完整度筛选；有些公开视频只有标题与链接，没有播放数据。没有用新闻文章冒充视频；可切换「新闻背景参考」查看事件线索。</p></div>':
    '<div class="note"><b>当前没有符合筛选条件的财经新闻线索。</b><p>可以切换「全部财经方向」，或等待下一次数据更新。</p></div>';
   return;
  }
@@ -82,15 +103,21 @@ function showRadar(){
    ' · 评论 '+metricDisplay(x.metrics&&x.metrics.comments)+
    ' · 收藏 '+metricDisplay(x.metrics&&x.metrics.favorites)+
    ' · 分享 '+metricDisplay(x.metrics&&x.metrics.shares)+
-   ' · 互动率 '+(x.engagement_rate==null?"未提供":num(x.engagement_rate).toFixed(2)+"%")+'</small></p>':'';
-  const formatLine=isVideo?'<p><small>'+esc(x.format||"视频形式待核实")+'；仅凭标题不能确认视频内容</small></p>':'';
+   ' · 互动率 '+(x.engagement_rate==null?"未提供":num(x.engagement_rate).toFixed(2)+"%")+
+   '（'+esc(x.engagement_basis||"缺少必要指标")+"）"+
+   ' · 同平台同时间段播放量/中位数 '+(x.platform_heat_ratio==null?"样本不足或未提供":num(x.platform_heat_ratio).toFixed(2)+"倍，样本"+num(x.platform_heat_sample)+"条")+
+   '</small></p>':'';
+  const formatLine=isVideo?'<p><small>平台：'+esc(x.platform||"未知")+' · 作者：'+esc(x.author||"未提供")+
+   ' · 形式：'+esc(x.format||"形式待核验")+'（'+esc(x.format_evidence||"标题推断或待核验")+
+   '） · 未人工观看核验</small></p>':'';
   const linkLabel=isVideo?"打开原视频":"查看原始新闻线索";
   return '<div class="card"><div class="row"><span class="tag">'+esc(x.topic_track)+'</span><span class="tag">'+scoreLabel+num(x.score)+'</span><small>'+esc(x.source)+'</small></div>'+
    '<h3>'+esc(x.title)+'</h3><p>'+esc(x.angle||"有哪些值得核实的证据和反方观点？")+'</p>'+
    metricLine+formatLine+
    '<details><summary>查看选题策划方向</summary><p><b>选题类型：</b>'+esc(x.topic_track)+'</p>'+
    '<p><b>可追问的问题：</b>'+esc(x.angle||"观点依据是什么？")+'</p>'+
-   '<p><b>核实任务：</b>核对原视频或原文、关键数字、财报或官方来源以及相反观点；这里尚未自动核查结论。</p>'+
+   '<p><b>推荐结构：</b>开头提出反直觉问题 → 复述原观点 → 拆解关键数据 → 给出反例与适用条件 → 提炼自己的结论。</p>'+
+   '<p><b>核实任务：</b>观看原视频、核对原始财报/公告、数据时间口径、观点归属与反方论据；形式与结论均未人工核验。</p>'+
    '<button type="button" data-radar-save="'+i+'">收藏到选题库</button></details>'+
    '<p><small>'+esc((x.published_at||"").slice(0,16))+' · '+esc(isVideo?"视频链接待观看":"新闻背景，非视频")+'</small></p>'+
    '<p><a href="'+esc(x.url||"#")+'" target="_blank" rel="noopener noreferrer">'+linkLabel+'</a></p></div>';
@@ -100,7 +127,7 @@ function showRadar(){
 function saveRadarTopic(i){
  const x=visibleRadarRows[i];if(!x)return;
  db.topics.unshift({
-  title:x.title,type:"财经口播",angle:(x.angle||"")+"\n方向："+(x.topic_track||"")+"\n来源："+(x.url||""),
+  title:x.title,type:x.format==="访谈/对话"?"视频播客":x.topic_track==="投资方法论"?"投资方法论":x.topic_track==="股票与公司分析"?"个股研究":"财经口播",angle:(x.angle||"")+"\n方向："+(x.topic_track||"")+"\n视频形式："+(x.format||"待核验")+"（仅标题推断）"+"\n来源："+(x.url||""),
   score:num(x.score),created:new Date().toISOString().slice(0,10)
  });
  save();alert("已收藏到选题库");
