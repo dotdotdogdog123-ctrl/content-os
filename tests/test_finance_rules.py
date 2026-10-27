@@ -16,6 +16,9 @@ class FinanceRulesTest(unittest.TestCase):
     def test_company_research(self):
         self.assertEqual(classify("泡泡玛特财报解读：营收和盈利如何变化"), "股票与公司分析")
 
+    def test_traditional_share_price(self):
+        self.assertEqual(classify("某公司股價下跌三成，估值是否合理"), "股票与公司分析")
+
     def test_market_events(self):
         self.assertEqual(classify("美联储降息会怎样影响股市"), "市场与经济热点")
 
