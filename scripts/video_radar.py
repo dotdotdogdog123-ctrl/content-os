@@ -5,6 +5,7 @@ import html
 import json
 import re
 import urllib.request
+import xml.etree.ElementTree as ET
 from pathlib import Path
 from finance_rules import CATEGORY, classify
 
@@ -17,6 +18,7 @@ SOURCES = (
 )
 FINANCE_CHANNEL_NAMES = ("财经", "金融", "商业", "经济", "投资", "理财")
 MATCH_TERMS = ("投资", "理财", "财经", "股票", "基金", "估值", "经济", "金融", "股市", "财报", "收益", "资产配置")
+YOUTUBE_CHANNELS = (("小Lin说", "UCilwQlk62k1z7aUEZPOB6yw"),)
 
 def fetch(url):
     request = urllib.request.Request(url, headers={
@@ -89,6 +91,46 @@ def convert(video, source):
         "status": "视频链接来自公开数据；内容尚未观看核实，互动数据为采集时快照",
     }
 
+def youtube_recent(name, channel_id):
+    """Read an official public Atom feed. It does not expose engagement metrics."""
+    url = "https://www.youtube.com/feeds/videos.xml?channel_id=" + channel_id
+    request = urllib.request.Request(url, headers={"User-Agent": "ContentOS/0.5 RSS Reader"})
+    with urllib.request.urlopen(request, timeout=18) as response:
+        root = ET.fromstring(response.read(1200000))
+    namespaces = {"atom": "http://www.w3.org/2005/Atom", "yt": "http://www.youtube.com/xml/schemas/2015"}
+    entries = root.findall("atom:entry", namespaces)
+    items = []
+    for entry in entries:
+        title = html.unescape(entry.findtext("atom:title", "", namespaces))
+        track = classify(title)
+        if not track:
+            continue
+        identifier = entry.findtext("yt:videoId", "", namespaces)
+        if not re.fullmatch(r"[0-9A-Za-z_-]{11}", identifier):
+            continue
+        date_text = entry.findtext("atom:published", "", namespaces)
+        try:
+            published = dt.datetime.fromisoformat(date_text.replace("Z", "+00:00"))
+        except (ValueError, TypeError):
+            continue
+        age_days = max(0, (NOW - published).total_seconds() / 86400)
+        if age_days > 180:
+            continue
+        score = min(90, round(35 + max(0, 25 - age_days / 4) +
+                              min(30, sum(word in title for word in MATCH_TERMS) * 7)))
+        items.append({
+            "title": title, "category": CATEGORY, "topic_track": track,
+            "content_type": "社交视频", "platform": "YouTube",
+            "source": "YouTube 官方频道 RSS（不是热度排行榜）", "author": name,
+            "url": "https://www.youtube.com/watch?v=" + identifier,
+            "published_at": published.isoformat(), "score": score,
+            "metrics": {"views": None, "likes": None, "comments": None, "favorites": None, "shares": None},
+            "engagement_rate": None, "format": video_format(title),
+            "angle": "这条财经视频有哪些可检验的结论？可以从什么不同角度重新讲述？",
+            "status": "来自公开视频频道的 RSS；未提供互动指标，未观看核实视频内容",
+        })
+    return len(entries), items
+
 def main():
     path = Path("data/videos.json")
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -111,7 +153,24 @@ def main():
             error = label + ": " + type(exc).__name__ + ": " + str(exc)[:120]
             errors.append(error)
             source_stats.append({"source": label, "status": "failed"})
-    if successful == 0 and path.exists():
+    for channel_name, channel_id in YOUTUBE_CHANNELS:
+        source = "YouTube：" + channel_name
+        try:
+            entry_count, videos = youtube_recent(channel_name, channel_id)
+            successful += 1
+            added = 0
+            for item in videos:
+                if item["url"] in seen:
+                    continue
+                results.append(item)
+                seen.add(item["url"])
+                added += 1
+            source_stats.append({"source": source, "fetched": entry_count, "matched_new": added, "status": "ok"})
+        except Exception as exc:
+            errors.append(source + ": " + type(exc).__name__ + ": " + str(exc)[:120])
+            source_stats.append({"source": source, "status": "failed"})
+    if not results and errors and path.exists():
+
         try:
             previous = json.loads(path.read_text(encoding="utf-8"))
             if previous.get("items"):
@@ -127,10 +186,10 @@ def main():
     results.sort(key=lambda item: (-item["score"], -(item["metrics"]["views"] or 0)))
     output = {
         "generated_at": NOW.isoformat(),
-        "method": "Public Bilibili finance-area video discovery; no login, AI or keyword-search bypass",
+        "method": "Public Bilibili finance discovery + selected verified YouTube channel Atom feeds",
         "items": results[:120], "errors": errors, "source_stats": source_stats,
         "data_stale": False,
-        "coverage": "B站财经分区与公开榜单的可得部分；不是全平台财经热榜，视频形式按标题初判",
+        "coverage": "B站财经分区与公开榜单 + 指定财经创作者 YouTube 频道RSS；不是全平台热榜，缺失互动指标不补造",
     }
     path.write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("Verified video links:", len(output["items"]), "success sources:", successful, "errors:", len(errors))
