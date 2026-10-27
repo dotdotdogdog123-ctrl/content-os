@@ -96,13 +96,13 @@
     }
   ],
   "errors": [
-    "YouTube：小Lin说: ValueError: feed channel ID mismatch expected=EZPOB6yw actual='z7aUEZPOB6yw'",
-    "YouTube：美投讲美股: ValueError: feed channel ID mismatch expected=dchWunwQ actual='vmTqdchWunwQ'",
-    "YouTube：一口新飯 MoneyXYZ: ValueError: feed channel ID mismatch expected=pRqkTbYw actual='IojGpRqkTbYw'",
-    "YouTube：財經M平方: ValueError: feed channel ID mismatch expected=QasrHZ_Q actual='Ch_cQasrHZ_Q'",
-    "YouTube：游庭皓的財經皓角: ValueError: feed channel ID mismatch expected=qzsRtL_g actual='fA2QqzsRtL_g'",
-    "YouTube：懶錢包 Lazy Wallet: ValueError: feed channel ID mismatch expected=bzlTGbFQ actual='RVkebzlTGbFQ'",
-    "YouTube：老王愛說笑: ValueError: feed channel ID mismatch expected=zUm_j4Hw actual='VIh0zUm_j4Hw'"
+    "YouTube：小Lin说: ValueError: feed channel ID mismatch len=22 prefix='ilwQlk62'",
+    "YouTube：美投讲美股: ValueError: feed channel ID mismatch len=22 prefix='BUH38E0n'",
+    "YouTube：一口新飯 MoneyXYZ: ValueError: feed channel ID mismatch len=22 prefix='h4QrR5V6'",
+    "YouTube：財經M平方: ValueError: feed channel ID mismatch len=22 prefix='6LU7FUBv'",
+    "YouTube：游庭皓的財經皓角: ValueError: feed channel ID mismatch len=22 prefix='0lbAQVpe'",
+    "YouTube：懶錢包 Lazy Wallet: ValueError: feed channel ID mismatch len=22 prefix='hYg2EINv'",
+    "YouTube：老王愛說笑: ValueError: feed channel ID mismatch len=22 prefix='vnLmiWt_'"
   ],
   "source_stats": [
     {
@@ -148,6 +148,6 @@
   ],
   "data_stale": true,
   "coverage": "B站财经分区与公开榜单 + 指定财经创作者 YouTube 频道RSS；不是全平台热榜，缺失互动指标不补造",
-  "last_attempt_at": "2026-10-27T20:32:17.508847+00:00",
+  "last_attempt_at": "2026-10-27T20:32:47.162961+00:00",
   "stale_reason": "本轮无匹配视频；保留历史快照，未伪装为最新数据"
 }
