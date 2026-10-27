@@ -24,17 +24,20 @@ class FinanceVideoRadarTest(unittest.TestCase):
     def test_youtube_feed_has_real_id_but_missing_metrics(self):
         published = (radar.NOW - dt.timedelta(days=1)).isoformat()
         xml = ('<feed xmlns="http://www.w3.org/2005/Atom" '
-               'xmlns:yt="http://www.youtube.com/xml/schemas/2015">'
+               'xmlns:yt="http://www.youtube.com/xml/schemas/2015" ' 
+               'xmlns:media="http://search.yahoo.com/mrss/">'
                '<yt:channelId>UCilwQlk62k1z7aUEZPOB6yw</yt:channelId>'
                '<entry><title>價值投資如何判斷估值？</title>'
                '<yt:videoId>abcdefghijk</yt:videoId>'
-               '<published>' + published + '</published></entry></feed>')
+               '<published>' + published + '</published>'
+               '<media:group><media:community><media:statistics views="12345"/>'
+               '</media:community></media:group></entry></feed>')
         with patch.object(radar, "request_bytes", return_value=xml.encode()):
             fetched, items = radar.youtube_recent("test", "UCilwQlk62k1z7aUEZPOB6yw")
         self.assertEqual(fetched, 1)
         self.assertEqual(len(items), 1)
         self.assertEqual(items[0]["url"], "https://www.youtube.com/watch?v=abcdefghijk")
-        self.assertIsNone(items[0]["metrics"]["views"])
+        self.assertEqual(items[0]["metrics"]["views"], 12345)
         self.assertFalse(items[0]["manually_verified"])
 
     def test_bilibili_requires_real_id_and_publish_time(self):
