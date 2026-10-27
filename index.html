@@ -47,6 +47,7 @@ async function loadRadar(){
   radarItems=(Array.isArray(data.items)?data.items:[]).map(radarNormalize).filter(Boolean).filter(x=>x.content_type!=="社交视频");
   newsCount=radarItems.length;
   if(data.errors&&data.errors.length)notes.push("新闻源部分失败");
+  if(data.data_stale)notes.push("新闻背景为上次有效数据，并非实时更新");
  }catch(e){radarItems=[];notes.push("新闻资料读取失败："+e.message)}
  try{
   const res=await fetch("./data/videos.json?ts="+Date.now(),{cache:"no-store"});
