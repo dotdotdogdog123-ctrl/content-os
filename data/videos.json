@@ -1,7 +1,100 @@
 {
-  "generated_at": "2026-10-27T16:51:24.047352+00:00",
-  "method": "Public Bilibili finance-area video discovery; no login, AI or keyword-search bypass",
-  "items": [],
+  "generated_at": "2026-10-27T16:56:20.337690+00:00",
+  "method": "Public Bilibili finance discovery + selected verified YouTube channel Atom feeds",
+  "items": [
+    {
+      "title": "史上最大现金收购案 富二代如何正确拼爹",
+      "category": "理财投资/财经",
+      "topic_track": "股票与公司分析",
+      "content_type": "社交视频",
+      "platform": "YouTube",
+      "source": "YouTube 官方频道 RSS（不是热度排行榜）",
+      "author": "小Lin说",
+      "url": "https://www.youtube.com/watch?v=wu0zS1AuI_E",
+      "published_at": "2026-10-09T11:01:37+00:00",
+      "score": 55,
+      "metrics": {
+        "views": null,
+        "likes": null,
+        "comments": null,
+        "favorites": null,
+        "shares": null
+      },
+      "engagement_rate": null,
+      "format": "视频形式待观看核实",
+      "angle": "这条财经视频有哪些可检验的结论？可以从什么不同角度重新讲述？",
+      "status": "来自公开视频频道的 RSS；未提供互动指标，未观看核实视频内容"
+    },
+    {
+      "title": "特朗普关税被判违法，这一整年白忙了? 现在关税什么情况?",
+      "category": "理财投资/财经",
+      "topic_track": "市场与经济热点",
+      "content_type": "社交视频",
+      "platform": "YouTube",
+      "source": "YouTube 官方频道 RSS（不是热度排行榜）",
+      "author": "小Lin说",
+      "url": "https://www.youtube.com/watch?v=T7z71yENz94",
+      "published_at": "2026-09-09T15:55:07+00:00",
+      "score": 48,
+      "metrics": {
+        "views": null,
+        "likes": null,
+        "comments": null,
+        "favorites": null,
+        "shares": null
+      },
+      "engagement_rate": null,
+      "format": "视频形式待观看核实",
+      "angle": "这条财经视频有哪些可检验的结论？可以从什么不同角度重新讲述？",
+      "status": "来自公开视频频道的 RSS；未提供互动指标，未观看核实视频内容"
+    },
+    {
+      "title": "资本是如何接连引爆多个国家的金融危机的？",
+      "category": "理财投资/财经",
+      "topic_track": "市场与经济热点",
+      "content_type": "社交视频",
+      "platform": "YouTube",
+      "source": "YouTube 官方频道 RSS（不是热度排行榜）",
+      "author": "小Lin说",
+      "url": "https://www.youtube.com/watch?v=7qWH7e_AEDs",
+      "published_at": "2026-05-16T09:02:47+00:00",
+      "score": 42,
+      "metrics": {
+        "views": null,
+        "likes": null,
+        "comments": null,
+        "favorites": null,
+        "shares": null
+      },
+      "engagement_rate": null,
+      "format": "视频形式待观看核实",
+      "angle": "这条财经视频有哪些可检验的结论？可以从什么不同角度重新讲述？",
+      "status": "来自公开视频频道的 RSS；未提供互动指标，未观看核实视频内容"
+    },
+    {
+      "title": "内存暴涨，谁在哭？谁在笑？",
+      "category": "理财投资/财经",
+      "topic_track": "市场与经济热点",
+      "content_type": "社交视频",
+      "platform": "YouTube",
+      "source": "YouTube 官方频道 RSS（不是热度排行榜）",
+      "author": "小Lin说",
+      "url": "https://www.youtube.com/watch?v=mcTAHffEkIw",
+      "published_at": "2026-05-31T01:00:21+00:00",
+      "score": 35,
+      "metrics": {
+        "views": null,
+        "likes": null,
+        "comments": null,
+        "favorites": null,
+        "shares": null
+      },
+      "engagement_rate": null,
+      "format": "视频形式待观看核实",
+      "angle": "这条财经视频有哪些可检验的结论？可以从什么不同角度重新讲述？",
+      "status": "来自公开视频频道的 RSS；未提供互动指标，未观看核实视频内容"
+    }
+  ],
   "errors": [
     "B站财经分区动态: ValueError: public feed response code -404",
     "B站知识区排行榜: ValueError: public feed response code -352"
@@ -26,8 +119,14 @@
       "fetched": 50,
       "matched_new": 0,
       "status": "ok"
+    },
+    {
+      "source": "YouTube：小Lin说",
+      "fetched": 15,
+      "matched_new": 4,
+      "status": "ok"
     }
   ],
   "data_stale": false,
-  "coverage": "B站财经分区与公开榜单的可得部分；不是全平台财经热榜，视频形式按标题初判"
+  "coverage": "B站财经分区与公开榜单 + 指定财经创作者 YouTube 频道RSS；不是全平台热榜，缺失互动指标不补造"
 }
