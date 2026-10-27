@@ -1,67 +1,7 @@
 {
-  "generated_at": "2026-10-27T16:56:53.232530+00:00",
+  "generated_at": "2026-10-27T16:57:55.243585+00:00",
   "method": "Financial-topic RSS background leads; heuristic relevance (not video or AI fact checking)",
   "items": [
-    {
-      "title": "华泰紫金天天发货币市场基金收益支付公告 - 新浪财经",
-      "category": "理财投资/财经",
-      "topic_track": "市场与经济热点",
-      "content_type": "新闻背景参考",
-      "source": "新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1KZ2hnbzFhaXRGdXpfeU9vWjhKMlN1OFdSUFc4UWJWemFlNkhoektQVVVtNUNDM1ExWTlvMnpJTkRkRUJaOFZWbHlZMWR3ZlpKVUZtNDdtd19FYU11U3Z3eWY3ajJUTlpqT0JWc0dBZXBycUNDX2JnSQ?oc=5",
-      "published_at": "2026-10-26T18:31:17+00:00",
-      "score": 83,
-      "angle": "事件背后的驱动因素是什么？哪些数据能验证市场判断？",
-      "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
-    },
-    {
-      "title": "[风险]纳斯达克ETF华安 (159632): 华安基金管理有限公司关于华安纳斯达克100交易型开放式指数证券投资基金（QDII）二级市场交易价格溢价风险提示公告- CFi.CN 中财网 - 中财网",
-      "category": "理财投资/财经",
-      "topic_track": "个人理财与资产配置",
-      "content_type": "新闻背景参考",
-      "source": "中财网",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1lQjdHR3E5c3RxZnI3UDRCT29sNmVTazVvMk5ncmU3eThQMXd0LUJPelpTaDZITC15dTU3ZmFLbDVTQWtlTnF3YUt5cGMzaEZOMFNoV21B?oc=5",
-      "published_at": "2026-10-27T09:42:02+00:00",
-      "score": 83,
-      "angle": "这对普通人的资产配置有什么实际影响？适用条件和主要风险是什么？",
-      "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
-    },
-    {
-      "title": "全国公募基金投资者调查问卷 - 新浪财经",
-      "category": "理财投资/财经",
-      "topic_track": "市场与经济热点",
-      "content_type": "新闻背景参考",
-      "source": "新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPd1E4Vk9fTjFlTkluQ25DSDA1OXRCYzJjU2YyY3BvUlRuUUpNaWUyMGpxcDNuR3c2NUNZY3pxREJNMmNsOW5GZ3NxWmx5MWJoTGZzcjNKcFI1bFRJVGVUaVFXUzI4TnVPQlp3TDA4dHRpMTZwTnUwdkgxaEZTeXBscHY5QlZaaDQ?oc=5",
-      "published_at": "2026-10-27T06:24:59+00:00",
-      "score": 76,
-      "angle": "事件背后的驱动因素是什么？哪些数据能验证市场判断？",
-      "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
-    },
-    {
-      "title": "民企300ETF前海开源(159106): 前海开源基金管理有限公司关于前海开源中证民企300交易型开放式指数证券投资基金新增申购赎回代办证券公司- CFi.CN 中财网 - 中财网",
-      "category": "理财投资/财经",
-      "topic_track": "个人理财与资产配置",
-      "content_type": "新闻背景参考",
-      "source": "中财网",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1pRVpHQVpjU3dNNEM3azA2RDNjT29temFiZGNPaHVjaHJIRjlnM1FmaThLQVNmeVdxVEMxZWFHQjVnNkYyZkN4aS00Ul8xNEhqMEVkNWZR?oc=5",
-      "published_at": "2026-10-27T09:42:03+00:00",
-      "score": 76,
-      "angle": "这对普通人的资产配置有什么实际影响？适用条件和主要风险是什么？",
-      "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
-    },
-    {
-      "title": "嘉实纳斯达克100交易型开放式指数证券投资基金（QDII）二级市场交易价格溢价风险提示及停复牌公告 - 新浪财经",
-      "category": "理财投资/财经",
-      "topic_track": "市场与经济热点",
-      "content_type": "新闻背景参考",
-      "source": "新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFAtcWV3bVlEOC1uYlJwSkg4eEZ3ZlpMUE9TMkxobHRaRTdMbVZFdDN4QlBWU2ZsdENENXpZbWZxTExaTzlJNy1QZm01ejFNN2x6NHZWRjg0R3dwZkwtRjQ4RHZNbHA4b3lRaFFIUGtUc1dlMGNNYW0ycA?oc=5",
-      "published_at": "2026-10-25T18:00:49+00:00",
-      "score": 73,
-      "angle": "事件背后的驱动因素是什么？哪些数据能验证市场判断？",
-      "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
-    },
     {
       "title": "钧崴电子（301458）2026年三季报简析：营收净利润同比双双增长，公司应收账款体量较大_财报季 - 证券之星",
       "category": "理财投资/财经",
@@ -72,6 +12,18 @@
       "published_at": "2026-10-26T22:11:59+00:00",
       "score": 69,
       "angle": "公司的盈利与竞争力受到什么影响？市场预期和估值是否匹配？",
+      "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
+    },
+    {
+      "title": "比特币跌破8万美元关口，Strategy暂停增持，美联储鹰派预期压制加密货币市场 - 富途牛牛",
+      "category": "理财投资/财经",
+      "topic_track": "市场与经济热点",
+      "content_type": "新闻背景参考",
+      "source": "富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1VMmVqOEVZT0d2WnBxQW13S3BIRndXQWUtYWFpM3RTNmJMRDZIQWNxaU9zd2dma2NsU2JQY2xucnI1MTF4ZGxBbTNDV1dXN29P?oc=5",
+      "published_at": "2026-10-27T06:34:49+00:00",
+      "score": 69,
+      "angle": "事件背后的驱动因素是什么？哪些数据能验证市场判断？",
       "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
     },
     {
@@ -99,18 +51,6 @@
       "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
     },
     {
-      "title": "灿勤科技(688182):江苏灿勤科技股份有限公司2026年度向特定对象发行A股股票并在科创板上市募集说明书（申报稿） - 中财网",
-      "category": "理财投资/财经",
-      "topic_track": "股票与公司分析",
-      "content_type": "新闻背景参考",
-      "source": "中财网",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE43NmpiRm9hbGQyaTFLMkFLNll2cV9ZaGZwZkhMQlFsZkZBdEVBX1lWMTBnaFd3em0wWUpJaVB2bnM2eUJpWFpqYmE4VVlUYjE3YnV5ZFFB?oc=5",
-      "published_at": "2026-10-27T11:06:59+00:00",
-      "score": 69,
-      "angle": "公司的盈利与竞争力受到什么影响？市场预期和估值是否匹配？",
-      "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
-    },
-    {
       "title": "全球存储巨头财报周来袭！AI需求与高景气能否延续，市场等答案 - 富途牛牛",
       "category": "理财投资/财经",
       "topic_track": "股票与公司分析",
@@ -123,54 +63,6 @@
       "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
     },
     {
-      "title": "电池ETF南方 (159147): 南方中证电池主题交易型开放式指数证券投资基金招募说明书（20261028更新） - 中财网",
-      "category": "理财投资/财经",
-      "topic_track": "个人理财与资产配置",
-      "content_type": "新闻背景参考",
-      "source": "中财网",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4yeFRLd2hScUYzZWN6clY3ajBlSHdDS01VWURJQ0lIekhfSmFWUUtpbVlXSUhmOF9oZnQ1QW9RSVZQMkF2Wm9UR2VNMkpmeGJURDh3S1ZB?oc=5",
-      "published_at": "2026-10-27T13:32:05+00:00",
-      "score": 69,
-      "angle": "这对普通人的资产配置有什么实际影响？适用条件和主要风险是什么？",
-      "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
-    },
-    {
-      "title": "自由现金流ETF平安 (159233): 平安中证全指自由现金流交易型开放式指数证券投资基金招募说明书（更新） - 中财网",
-      "category": "理财投资/财经",
-      "topic_track": "个人理财与资产配置",
-      "content_type": "新闻背景参考",
-      "source": "中财网",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1NQ3BMa3hxZUlycFk4dC1RZzF0WV9vUG9rc0JUdjlaTzFDSUE1N1p5NzhJcWhBMTBIaGx3VGZJZV9JZ2hSZUpib1dqVFdhTl94cW84MWVR?oc=5",
-      "published_at": "2026-10-27T13:37:27+00:00",
-      "score": 69,
-      "angle": "这对普通人的资产配置有什么实际影响？适用条件和主要风险是什么？",
-      "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
-    },
-    {
-      "title": "博时标普500交易型开放式指数证券投资基金溢价风险提示公告 - 新浪财经",
-      "category": "理财投资/财经",
-      "topic_track": "市场与经济热点",
-      "content_type": "新闻背景参考",
-      "source": "新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBzQ2ZlOS1uTVhIb0NxWVozY01vMXZld1RneEQ3OXBxdndzYVNMWUtmMndCb1FhVkhDc2o0bUJfX0FybzhWRThMay16b0N4aDljYXI5NjVPcmVNOWw2amRxNHExVkk1OXFaVjVIS0J1eGY2cG1MUUNqQQ?oc=5",
-      "published_at": "2026-10-25T17:54:15+00:00",
-      "score": 66,
-      "angle": "事件背后的驱动因素是什么？哪些数据能验证市场判断？",
-      "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
-    },
-    {
-      "title": "认购代码158907！国泰鑫汇均衡收益主动ETF正在发售_投资者网_媒体广场_财经 - 证券之星",
-      "category": "理财投资/财经",
-      "topic_track": "个人理财与资产配置",
-      "content_type": "新闻背景参考",
-      "source": "证券之星",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1OLU5kWGZtOE0yTzg3S2pGZnFUSEZrR2lJMzNYRE8xNVE5NnRBRVphVnNYMFIyeFVoSkVucVhYY0syaHFISGtvUFVXd2JpUUFadlk2WUFESU11TldwXzZueQ?oc=5",
-      "published_at": "2026-10-26T03:16:35+00:00",
-      "score": 66,
-      "angle": "这对普通人的资产配置有什么实际影响？适用条件和主要风险是什么？",
-      "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
-    },
-    {
       "title": "Anthropic正式提交IPO申请！股票代码“ANT”，上半年净亏807亿美元，警示人类“生存危机” - 华尔街见闻",
       "category": "理财投资/财经",
       "topic_track": "股票与公司分析",
@@ -180,18 +72,6 @@
       "published_at": "2026-10-26T21:01:41+00:00",
       "score": 62,
       "angle": "公司的盈利与竞争力受到什么影响？市场预期和估值是否匹配？",
-      "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
-    },
-    {
-      "title": "新基上架 | 把握产业发展期，德邦数字经济混合发起式今日重磅发售！ - 新浪财经",
-      "category": "理财投资/财经",
-      "topic_track": "市场与经济热点",
-      "content_type": "新闻背景参考",
-      "source": "新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPVHdXdlZ5YWhKeUVSTW16VFlwSjNudmxlZkhnV0ZaalNtejNPZzVMRlRQMDhiYnA0c0xHY2FGQzRGc1ZRRUNsWmdfdGtYS1pueTU2cGJuazFvM1A3bzZSM2RsazJJQTVCNlRaSjY4OHgya09PMG5OQ0pZWEV5aWRHblpQeDZydw?oc=5",
-      "published_at": "2026-10-27T01:22:36+00:00",
-      "score": 62,
-      "angle": "事件背后的驱动因素是什么？哪些数据能验证市场判断？",
       "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
     },
     {
@@ -214,18 +94,6 @@
       "source": "搜狐网",
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOVkpNMmlMb2dCRld0YVRFWV9ZZVdmZjRrUzNycE8zSFF3WWxTRFBrVjNQX2xzWi1DaE9oYzE0aXZ3YjI0Qm83OTc3THhuVFVMVERtV2tsWHcxQnUtRElDMVVDWGtiR2gyQ1MwMkRma1h4SlVBOVFqbldxeDZnaTNZZGliSzNEYWtK?oc=5",
       "published_at": "2026-10-27T04:57:02+00:00",
-      "score": 62,
-      "angle": "这对普通人的资产配置有什么实际影响？适用条件和主要风险是什么？",
-      "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
-    },
-    {
-      "title": "MSCIA股ETF平安(512360)近3年净值上涨16.63%，成立以来超越基准年化收益达3.28% - 手机新浪网",
-      "category": "理财投资/财经",
-      "topic_track": "个人理财与资产配置",
-      "content_type": "新闻背景参考",
-      "source": "手机新浪网",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPQnJma0FSN1A3TlB3VXhZRUM5MFdlRFdvQmFEVDM2c1lxaXU0Sm1Mc1I2RUhWXzlpYUpwQUdVcUMtTk11Ny1rVUJfZHdQWU9LYUViaGpzenpKcWVhY3E4TjQxUlhZdUM3Rk9vRTlUeDc2LXBwV1NOREZxTFlhdVBsWlVVNA?oc=5",
-      "published_at": "2026-10-27T06:27:00+00:00",
       "score": 62,
       "angle": "这对普通人的资产配置有什么实际影响？适用条件和主要风险是什么？",
       "status": "财经背景线索；未验证原始报道，不是视频或已证实的投资建议"
