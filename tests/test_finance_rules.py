@@ -22,6 +22,15 @@ class FinanceRulesTest(unittest.TestCase):
     def test_exclude_fund_nav_spam(self):
         self.assertIsNone(classify("某混合基金A净值增长率2.5%，最新净值公布"))
 
+    def test_exclude_celebrity_market_word(self):
+        self.assertIsNone(classify("明星被封杀，没有中国市场会失去什么"))
+
+    def test_exclude_tech_with_publisher_name(self):
+        self.assertIsNone(classify("腾讯云走进端侧具身智能 - 21财经"))
+
+    def test_exclude_fund_admin_notice(self):
+        self.assertIsNone(classify("华宝基金旗下基金开通基金转换业务公告"))
+
     def test_exclude_tech_news(self):
         self.assertIsNone(classify("OpenAI发布全新Agent世界模型"))
 
