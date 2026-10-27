@@ -1,7 +1,57 @@
 {
-  "generated_at": "2026-10-27T16:29:21.586133+00:00",
-  "method": "Public Bilibili popular feed; no AI or login",
-  "items": [],
-  "errors": [],
-  "coverage": "仅公开泛热门榜单中符合财经关键词的视频，非全站财经热榜"
+  "generated_at": "2026-10-27T16:46:49.940179+00:00",
+  "method": "Public Bilibili finance-area video discovery; no login, AI or keyword-search bypass",
+  "items": [
+    {
+      "title": "姆巴佩发表涉华不当言论！全网封杀！没有中国市场，姆巴佩会失去什么？",
+      "category": "理财投资/财经",
+      "topic_track": "市场与经济热点",
+      "content_type": "社交视频",
+      "platform": "B站",
+      "source": "B站全站热门补充",
+      "author": "达芬奇矩阵",
+      "url": "https://www.bilibili.com/video/BV1XSxT6GEwQ",
+      "published_at": "2026-10-27T08:43:02+00:00",
+      "score": 49,
+      "metrics": {
+        "views": 578075,
+        "likes": 6795,
+        "comments": 264,
+        "favorites": 2132,
+        "shares": 1286
+      },
+      "engagement_rate": 1.81,
+      "format": "视频形式待观看核实",
+      "angle": "这条视频最值得追问的投资观点是什么？有哪些事实、风险和反方论据？",
+      "status": "视频链接来自公开数据；内容尚未观看核实，互动数据为采集时快照"
+    }
+  ],
+  "errors": [
+    "B站财经分区动态: ValueError: public feed response code -404",
+    "B站知识区排行榜: ValueError: public feed response code -352"
+  ],
+  "source_stats": [
+    {
+      "source": "B站财经分区近期投稿",
+      "fetched": 0,
+      "matched_new": 0,
+      "status": "ok"
+    },
+    {
+      "source": "B站财经分区动态",
+      "status": "failed"
+    },
+    {
+      "source": "B站知识区排行榜",
+      "status": "failed"
+    },
+    {
+      "source": "B站全站热门补充",
+      "fetched": 50,
+      "matched_new": 1,
+      "status": "ok"
+    }
+  ],
+  "data_stale": false,
+  "coverage": "B站财经分区与公开榜单的可得部分；不是全平台财经热榜，视频形式按标题初判"
 }
