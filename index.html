@@ -81,8 +81,8 @@ function showRadar(){
  visibleRadarRows=pool.filter(x=>(filter==="all"||x.topic_track===filter)&&
   (kind!=="video"||((platform==="all"||x.platform===platform)&&
   (format==="all"||x.format===format||x.format==="标题推断："+format)&&
-  (metric==="all"||(metric==="views"&&x.metrics&&x.metrics.views!=null)||(metric==="engagement"&&x.engagement_rate!=null))));
- const numeric=x=>Number.isFinite(Number(x))?Number(x):-1;
+  (metric==="all"||(metric==="views"&&x.metrics&&x.metrics.views!=null)||(metric==="engagement"&&x.engagement_rate!=null)))));
+ const numeric=x=>x==null||x===""?-1:Number.isFinite(Number(x))?Number(x):-1;
  visibleRadarRows.sort((a,b)=>sort==="recent"?String(b.published_at||"").localeCompare(String(a.published_at||"")):
   sort==="views"?numeric(b.metrics&&b.metrics.views)-numeric(a.metrics&&a.metrics.views):
   sort==="heat"?numeric(b.platform_heat_ratio)-numeric(a.platform_heat_ratio):numeric(b.score)-numeric(a.score));
