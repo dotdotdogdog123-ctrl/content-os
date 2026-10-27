@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T16:22:38.395826+00:00",
+  "generated_at": "2026-10-27T16:29:18.778559+00:00",
   "method": "RSS news discovery + transparent heuristic scoring (not AI)",
   "items": [
     {
@@ -13,16 +13,6 @@
       "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
     },
     {
-      "title": "“我们不造机器人，我们造机器人的脑子”：港股上市公司量化派获2000台机器人订单， 撕开物理 AI的商业化真相 - 36氪",
-      "category": "AI科技访谈",
-      "source": "36氪",
-      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBlYmxiNWk2NzZrcE9QT0h0WUVpM2pBc2g0WDVHSkFxSFMxeENOcTE5dmpPS3NQSEZSYno3NEUwdHlJU1lVbktYVWN1aGZCdw?oc=5",
-      "published_at": "2026-10-25T19:32:00+00:00",
-      "score": 82,
-      "angle": "这是技术能力突破，还是商业化进展？还有哪些尚未解决的真实世界难题？",
-      "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
-    },
-    {
       "title": "一分钟掌握今日全球AI圈大事10.27 AI时代不掉队每日必知AI圈那些事儿#人工智能#AI #大模型#智能体#OpenAI下一代模型曝光 - 抖音",
       "category": "财经价值投资",
       "source": "抖音",
@@ -30,16 +20,6 @@
       "published_at": "2026-10-26T23:05:00+00:00",
       "score": 76,
       "angle": "这条消息会怎样改变公司的长期盈利能力？市场价格已经反映了多少预期？",
-      "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
-    },
-    {
-      "title": "安谋科技极术社区联合开源AIOS联盟共探具身智能落地方案_行业动态 - 投资界",
-      "category": "AI科技访谈",
-      "source": "投资界",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFB1anhtOHhGdERibWZrb1Fielo1UEhpWmt2SUN0T1lFTERsY0o5TVRMV1hCQ2JoZnlNTWRZcnFXMC1MUXdBTVNCUzk1anhPWkxQZEw3WDdFbFY?oc=5",
-      "published_at": "2026-10-27T04:23:00+00:00",
-      "score": 76,
-      "angle": "这是技术能力突破，还是商业化进展？还有哪些尚未解决的真实世界难题？",
       "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
     },
     {
@@ -73,6 +53,16 @@
       "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
     },
     {
+      "title": "招商品质升级混合A：2026年第三季度利润1996.04万元 净值增长率2.23% - 搜狐网",
+      "category": "财经价值投资",
+      "source": "搜狐网",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQTWhyVFVYZDU3QVJ5UjYyQzN1X0lBelpoNFQ1X2RvUW1kSE5nOWY0M3BQQzllTEVob1Atd0RmS3NOM1c2OEZVOVduVVNUTFR3WmdMWkd1MmFXM1E4bXgyOFBIZEdneWZTdV80U3k3NHhPdVgyUEtjQm1qM2NXOGprM3ZnbFpoRl9oVjlyOQ?oc=5",
+      "published_at": "2026-10-27T15:58:08+00:00",
+      "score": 76,
+      "angle": "这条消息会怎样改变公司的长期盈利能力？市场价格已经反映了多少预期？",
+      "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
+    },
+    {
       "title": "杨立昆首次详谈AMI商业化路线：先发论文，再做工业AI，最终进军机器人 - Sohu",
       "category": "AI科技访谈",
       "source": "Sohu",
@@ -93,13 +83,13 @@
       "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
     },
     {
-      "title": "中科慧灵完成数亿元 A++ 轮融资：制鞋机器人订单超 4 亿元，具身智能开始拼量产交付 - InfoQ-CN",
-      "category": "AI科技访谈",
-      "source": "InfoQ-CN",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE4xRVoxaGhfNzFyc2xHVWNpWGdSajRuRWp0bU1FWVlaZ0VHejlfVlBIQ2ZycWtpaG4yc0ZVYkhGWFE3VF9pLXh1aE1oSy1rNF8tSEQ2Y1ktY3pKUVpPV2c?oc=5",
-      "published_at": "2026-10-26T10:32:26+00:00",
-      "score": 74,
-      "angle": "这是技术能力突破，还是商业化进展？还有哪些尚未解决的真实世界难题？",
+      "title": "半导体遭重创之际，科技多头盯上AI应用! ServiceNow(NOW.US)股价逆势大涨，大摩聚焦“智能体消费+工作流升级” - 富途牛牛",
+      "category": "财经价值投资",
+      "source": "富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQVk9TMng3S3E4RkdzQ01nN21lSVJmMEtQX0ZGZUhrNnFCUWZaZm05RjhkZ0xPQVFBOEo3SDZ4czRyalZlTUwxRVpmTndFMHB6d0ZVdE4wTmZsZzVsUk9wblVXZGhMVmZnRmZXWXYyTHVnbl9lVl9wS0RWQVNBcmoyZWZnNG9IUFc5SHVQM0k0Tk5MQWx3RzdzUHM5OHA3SG5pbEJxSQ?oc=5",
+      "published_at": "2026-10-27T03:04:00+00:00",
+      "score": 68,
+      "angle": "这条消息会怎样改变公司的长期盈利能力？市场价格已经反映了多少预期？",
       "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
     },
     {
@@ -153,21 +143,21 @@
       "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
     },
     {
-      "title": "个人智能体扎堆遭 APP 拒绝，松延动力冲刺港股 IPO 丨 AI周报 - 手机新浪网",
+      "title": "个人智能体扎堆遭 APP 拒绝，松延动力冲刺港股 IPO | AI周报 - DoNews",
       "category": "AI科技访谈",
-      "source": "手机新浪网",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9sRnJCSy05RnE1aFBtVngtVE9iLWRTMnctNUdmQndUSXhMWVlxUXlvQnFCYWZjQ1hveVA4OE02LTY5SHdWUkRsc2Z1Z2EzaUMzNThSMEhzUlIzY0hlYks3Zl9ZY1h2c01kcGZGakdsbjBLaVhQNGpzdEJTM2JlUQ?oc=5",
-      "published_at": "2026-10-27T09:43:00+00:00",
+      "source": "DoNews",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5YQ0Z1Sld1MTNCVktoZFBMWUdJVTdFUnJvWEhSQzRGTjh0N0c3MFRURmtmNjF4aXk0dmt0NHZNVExoei1qN2oxM1d5OFJLTFFSZXpUWmNlY29nT0pSU3FtN2JPWUM?oc=5",
+      "published_at": "2026-10-27T09:45:28+00:00",
       "score": 68,
       "angle": "这是技术能力突破，还是商业化进展？还有哪些尚未解决的真实世界难题？",
       "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
     },
     {
-      "title": "乔布斯的皮克斯，狂赞中国物理AI数据终端 - 手机新浪网",
+      "title": "Google发布Genie 4世界模型可生成更逼真的互动世界- Google 谷歌 - cnBeta.COM",
       "category": "AI科技访谈",
-      "source": "手机新浪网",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE04ZnZfRG44eXFLQWkzMXl2Qy1Gd1B2dDBWOTV3RDdnRHFKRlhNLWpXQVdraWRkb25FUWxwWTlhNVd4OHRiZkFkbTk3Qk9nXzM0NzV6MEkzUVB3dVhTa0JfWGtsWFpNdU9UXzVBR1FOUktWRUwxbzhOYjRWWHBBS3M?oc=5",
-      "published_at": "2026-10-27T10:25:00+00:00",
+      "source": "cnBeta.COM",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1URTVXZXlnU3NKNUNPUEg0T2pmdWctRkhOVEJFRF9xVXZabFdnbGltbXQyMjR1a0NDakVvMHBrVzNZMDU4M2p3WmdIVmJ4Q2E1ZGtoOTFLeVZKTmZsRHFvOQ?oc=5",
+      "published_at": "2026-10-27T16:19:00+00:00",
       "score": 68,
       "angle": "这是技术能力突破，还是商业化进展？还有哪些尚未解决的真实世界难题？",
       "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
@@ -193,52 +183,12 @@
       "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
     },
     {
-      "title": "面向Physical AI与Agentic AI，安谋科技旗下极术社区发布JishuFriends与JishuBuddy - CSDN",
-      "category": "AI科技访谈",
-      "source": "CSDN",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBDekxQdVJsaUJfMU9SWkFsN0RzWkxQNUNGOE9aZF9xN1hFa3NGeGpSTlJENHVIVTR6dFBBMXhqTGkwQ3prSEhWUGhZLURFVHJqU0RMODdvUThtT0d1RGc?oc=5",
-      "published_at": "2026-10-26T07:19:01+00:00",
-      "score": 66,
-      "angle": "这是技术能力突破，还是商业化进展？还有哪些尚未解决的真实世界难题？",
-      "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
-    },
-    {
-      "title": "物理AI的GPT时刻快到了？ - OFweek机器人网",
-      "category": "AI科技访谈",
-      "source": "OFweek机器人网",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1BNFdPbDFkcGJvWWVPQ1FKZUxMNk1WSTJtSlZyVDFiWnZMcDhxaUxjZ0NxS0FaY2RqbkxLdVgzOVZyanFiMXVwYU9KMEhieWduQXpxUHJ0Y1R5RzdPaUg2TWtPUXYxSHBwR3lFQVRybGY?oc=5",
-      "published_at": "2026-10-26T07:51:00+00:00",
-      "score": 66,
-      "angle": "这是技术能力突破，还是商业化进展？还有哪些尚未解决的真实世界难题？",
-      "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
-    },
-    {
-      "title": "星火X2.6、Agent OS、星辰TaaS首发亮相，科大讯飞加速AI走向产业生产力 - 新浪财经",
-      "category": "AI科技访谈",
-      "source": "新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPVFBHQzhRUUl5bnhmWU9qSS02bTFPOFo0S3RIODNlU1lvdzVQalA1a3FtUGxoQWZnT25yVzNyUXQyR21nTXhuVU1wZldUM1dTelVIdF9LWjBVNjNrTDVvSHpwbms5ZFJSX09zNjdQdTk1QThfVXV6TlBkT3RwV21ibktn?oc=5",
-      "published_at": "2026-10-26T08:26:29+00:00",
-      "score": 66,
-      "angle": "这是技术能力突破，还是商业化进展？还有哪些尚未解决的真实世界难题？",
-      "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
-    },
-    {
       "title": "NVIDIA Cosmos开放新工具助力世界模型训练评估与部署-AI基础设施 - 至顶网",
       "category": "AI科技访谈",
       "source": "至顶网",
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5YZTdlZlpBZ2lUaHEzeWpsSThBMGxzN3Nnc3ZkYXJ6eWRWZTdJdG54MEMxUy10MlRQRDMyeGxXQ3ZyVTJhYXIzSV85R2ZKLUxvWk5vWmZYSlAzN0xKWDdYOVY1Rk03Ykhudlg0NkR0aEdvUQ?oc=5",
       "published_at": "2026-10-26T09:09:17+00:00",
       "score": 66,
-      "angle": "这是技术能力突破，还是商业化进展？还有哪些尚未解决的真实世界难题？",
-      "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
-    },
-    {
-      "title": "首场成都市人工智能生态大会暨2026腾讯云西部架构师峰会举行 - finance.sina.com.cn",
-      "category": "AI科技访谈",
-      "source": "finance.sina.com.cn",
-      "url": "https://news.google.com/rss/articles/CBMihwRBVV95cUxOSW43cDZSdXd6c1NwN2Z3SDFJNkZfcjhnc3FhSFBvT0ZQMm4tN1lyTV95UmtKX1ZuVkYtWlhzVjVmb2x0QTg4OEpUcDZxd0ZMVmotLUF0TzQ0ZE9tb3hDaktSOFEtd05VN2F5R1laQnBGeWgxeXBrd2toOWg4QnVTV3pVTW9RMHNKRDh3OVUxeFdPVm81a1ZibFZWdUEtSUZhZDF2V1hCeGI0Wk9pZVZUYm9uMmRPbHJuX2pXN2wwbzNJTUxvUnFFR0NFR01lTnhzaEU0ckVyUldlZkc4U2FYbml6c0dEb2dBbjJiYjBzQlVVaGpHcTBId0VzYTFBRnE0WFZ2b3dtZEQzS0dhSE1XcTFDU0FCN1Fza19fOTBIVUx1eUdhZG5oN2pBY3NsVUp6aGFTVDVDajdsVTFUYnBGYUJXc1hGR0twYWt2NzlJM1hzdE82azRZU2xqOWR4bzJTSklZWXVhMWZPam8yYVgwSkp5b3dScnllSzlOcms4VGduallWMkJYeFZDY1pwQktsaTluYmxDdTJaSWtBRUpFNEFvZUNIaEg0QU9ncTJUNXZsaWtfOWV1UU5xZElrYW5qVlRRa290SjBEUVhacnd2Rmo1c2hORm82WjNpY2tQTklFbF93OWttQjhucG1sS3NjREExTkJjZG9DTkJCdTdLNlJkQmNoUDg?oc=5",
-      "published_at": "2026-10-27T02:41:08+00:00",
-      "score": 60,
       "angle": "这是技术能力突破，还是商业化进展？还有哪些尚未解决的真实世界难题？",
       "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
     },
@@ -250,16 +200,6 @@
       "published_at": "2026-10-27T07:43:00+00:00",
       "score": 60,
       "angle": "这条消息会怎样改变公司的长期盈利能力？市场价格已经反映了多少预期？",
-      "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
-    },
-    {
-      "title": "普及率剑指 90%！智能体赛道爆发哪些公司值得关注？ - 手机新浪网",
-      "category": "AI科技访谈",
-      "source": "手机新浪网",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOa1B0MG9Fd1lmY0oxYjRvYWR6ZklxZFBLZlloV1J5ZU8zcnozZ2lQSVlWX3NLNG8tNGtBZ0Q3RldGX1RTdjd0bE42UC1PYjgzOXpycWNHVlBGaV9saVF6ZkJ6WmNwaE1XbTNtZF8wWFdRUXNhTWhOcTNGLWh0NUFqWXVUNW1rNktCajM0MVl3?oc=5",
-      "published_at": "2026-10-27T12:09:00+00:00",
-      "score": 60,
-      "angle": "这是技术能力突破，还是商业化进展？还有哪些尚未解决的真实世界难题？",
       "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
     },
     {
@@ -313,16 +253,6 @@
       "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
     },
     {
-      "title": "智谱(02513)股票股价_股价行情_讨论_资讯_财报_数据报告 - 雪球",
-      "category": "财经价值投资",
-      "source": "雪球",
-      "url": "https://news.google.com/rss/articles/CBMiP0FVX3lxTE1jN29MUTZrX3piT2syV1hFM1llaEdMX3FJYUNrcUMwb1NORjAwLUQzNUhHQnJSVjVsdXptSVVRQQ?oc=5",
-      "published_at": "2026-10-26T11:54:13+00:00",
-      "score": 58,
-      "angle": "这条消息会怎样改变公司的长期盈利能力？市场价格已经反映了多少预期？",
-      "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
-    },
-    {
       "title": "华硕Ascent GX10算力托举AI创新落地 NVIDIA开发者日及第三届DGX Spark黑客松圆满落幕 - 驱动之家",
       "category": "AI科技访谈",
       "source": "驱动之家",
@@ -343,6 +273,16 @@
       "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
     },
     {
+      "title": "机器人会自己攒Skill了！复旦提出具身自进化新框架 - 智源社区",
+      "category": "AI科技访谈",
+      "source": "智源社区",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1oWjlWTXdEM01ZcHpibm82MlVKdlJrdWVWT3kxN1ByRTdNaDVNc000c2VnLUZJS1lUMUpoamtxY3FOMTBteTVlcg?oc=5",
+      "published_at": "2026-10-25T05:50:00+00:00",
+      "score": 56,
+      "angle": "这是技术能力突破，还是商业化进展？还有哪些尚未解决的真实世界难题？",
+      "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
+    },
+    {
       "title": "港股10月回购热度不减：36.75亿港元真金白银托市，李宁、思摩尔国际开启年内首次回购 - 手机新浪网",
       "category": "财经价值投资",
       "source": "手机新浪网",
@@ -353,23 +293,33 @@
       "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
     },
     {
-      "title": "车企天团同台 共议智能网联汽车新途 - 手机新浪网",
+      "title": "㽹狗永远是疯狗，永远也防不了小人乱咬人 - 抖音",
+      "category": "财经价值投资",
+      "source": "抖音",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5SY3ZWczZ6eTB3Z2dpbTNkUUFNNE5wdDZ1MjZ1ZTNUZHVONTF0aFBmRWtCY2R6czI0SHNEcERPNXBpVlNEUzIzUzk2bV9yUjZ5SkQtb0wzRHZfTkZR?oc=5",
+      "published_at": "2026-10-26T08:00:45+00:00",
+      "score": 50,
+      "angle": "这条消息会怎样改变公司的长期盈利能力？市场价格已经反映了多少预期？",
+      "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
+    },
+    {
+      "title": "全市第一！吴中4家企业入选 - finance.sina.com.cn",
       "category": "AI科技访谈",
-      "source": "手机新浪网",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1NZFh2bjJLZVVsdVM1VFRpM2xoVHNtR0VIVFRuS1ZaS1AtTW9GRktuQXpHYU1zV0ZTS1VuX1FZMVRVWjI0TzZRM0pOOXlxVDJmbGlmNzh6ZHg4TFE0M1JkcGpOZk1tX2NXSGxQZm9MRzlJUEFQeFJ0YkdwWGZ2UQ?oc=5",
-      "published_at": "2026-10-26T04:09:34+00:00",
+      "source": "finance.sina.com.cn",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNM2hIMlNiR2hRTUg0QS1HVElyNjUxejM5aW9RZ3Flenhva3BIakg5MTczVUtPUTZ3eEVmT1RJZjgwNURlQV9GdDBYWkFGbDVqaHFmbDdIZ2t6cjRjY05pY1dlYjFfMVBYVEN1NGFfRGkzN0VEekdsa19YR3Z3RS1OZ2ZoSWRMWkJDODNQNmktaUI1dVBBUF9TRQ?oc=5",
+      "published_at": "2026-10-26T09:47:17+00:00",
       "score": 50,
       "angle": "这是技术能力突破，还是商业化进展？还有哪些尚未解决的真实世界难题？",
       "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
     },
     {
-      "title": "那根针来了 这周行情会好吗 #股民 #股票 #通达信 #沪指 - 抖音",
-      "category": "财经价值投资",
-      "source": "抖音",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5nNFhpbWhxYkdTaVlkU3hkN1hCS2FaLVNMQU5kcWtOZllOYlYwcVYtVHpmOEVwLUNoSTk0ZEU2eFRtU1FHZTRIWnpZV1NLS2NwVS1QRWVsdXNmVEpG?oc=5",
-      "published_at": "2026-10-26T08:00:24+00:00",
+      "title": "首场成都市人工智能生态大会暨2026腾讯云西部架构师峰会举行 - 手机新浪网",
+      "category": "AI科技访谈",
+      "source": "手机新浪网",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1VU0Nrb2czcHZNRm1NQjc3RGZxanNRdDJSMnZGRzFyaWwzSm4yZUZWX0RWUFU0cmFPNm9JWm1nMzZNUldVSzVVanlRblQyZkFjYk5NaXRUcUhSTXljRmVJYm1RLVlwVE5yS0Ywck9RZ3ZzdG9iTS1XeXNyQnNDTzA?oc=5",
+      "published_at": "2026-10-26T13:10:00+00:00",
       "score": 50,
-      "angle": "这条消息会怎样改变公司的长期盈利能力？市场价格已经反映了多少预期？",
+      "angle": "这是技术能力突破，还是商业化进展？还有哪些尚未解决的真实世界难题？",
       "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
     },
     {
@@ -383,21 +333,21 @@
       "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
     },
     {
+      "title": "首场成都市人工智能生态大会暨2026腾讯云西部架构师峰会举行 - finance.sina.com.cn",
+      "category": "AI科技访谈",
+      "source": "finance.sina.com.cn",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQQWxVT08zcV9yekE4dUJycFcwUVFVc2JMdFVCdVB2UURNRWtoSjNLYVhzc3NxVWdVakpHR1c0TDVBUnRvV2wySVQ2eUg3ZXZCN3A5S3MxaUhhZkRNTVk3bUtEM09SNFlTbG5reFBxT2t3V25FcGZmazFDbHpoR3hUOVZwckRkRzItX2FqakhRUHdGOUxqQTEzMGNHaVpyMU96VjhZdE9obw?oc=5",
+      "published_at": "2026-10-26T15:21:41+00:00",
+      "score": 50,
+      "angle": "这是技术能力突破，还是商业化进展？还有哪些尚未解决的真实世界难题？",
+      "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
+    },
+    {
       "title": "找机器人去交社保机器人交社保靠不靠谱#社保 #人工智能替代岗位#机器人 #人工智能替代岗位#机器人时代的就业 - 抖音",
       "category": "财经价值投资",
       "source": "抖音",
       "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5hTjJBQ0VYcXk5eEpnOVFEWEdDNFBZU3BTcU1QcTNJSm5iZXRHOUdkVW1vZXF4RmJ0Qkl1V2I5aVZDNE1NMWxqSDBxazFTdV93MjBEblZDaExPVXVQ?oc=5",
       "published_at": "2026-10-25T08:00:52+00:00",
-      "score": 48,
-      "angle": "这条消息会怎样改变公司的长期盈利能力？市场价格已经反映了多少预期？",
-      "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
-    },
-    {
-      "title": "中国中免(01880)股票股价_股价行情_讨论_资讯_财报_数据报告 - 雪球",
-      "category": "财经价值投资",
-      "source": "雪球",
-      "url": "https://news.google.com/rss/articles/CBMiP0FVX3lxTE9TNE1oWTU1LTU3Tmw2dlFuakFQOV9CWG5udE5sd2FUYnpKcjdHdlZVVktzQ2tyRDBIbG55VGlRNA?oc=5",
-      "published_at": "2026-10-25T10:06:48+00:00",
       "score": 48,
       "angle": "这条消息会怎样改变公司的长期盈利能力？市场价格已经反映了多少预期？",
       "status": "待核实：新闻聚合来源，需核对原始报道和公司公告"
