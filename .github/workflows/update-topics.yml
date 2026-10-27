@@ -18,11 +18,13 @@ jobs:
           python-version: '3.12'
       - name: Fetch public RSS topics
         run: python scripts/update_topics.py
+      - name: Fetch public finance videos
+        run: python scripts/video_radar.py
       - name: Commit updated topics
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/topics.json
+          git add data/topics.json data/videos.json
           if ! git diff --cached --quiet; then
             git commit -m "chore: refresh topic radar"
             git push
