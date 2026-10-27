@@ -141,7 +141,7 @@ def youtube_recent(name, channel_id):
           "yt": "http://www.youtube.com/xml/schemas/2015"}
     actual_channel = root.findtext("yt:channelId", "", ns)
     if actual_channel and actual_channel != channel_id:
-        raise ValueError("feed channel ID mismatch")
+        raise ValueError("feed channel ID mismatch expected=" + channel_id[-8:] + " actual=" + repr(actual_channel[-12:]))
     entries = root.findall("atom:entry", ns)
     items = []
     for entry in entries:
