@@ -96,8 +96,13 @@
     }
   ],
   "errors": [
-    "B站财经分区动态: ValueError: public feed response code -404",
-    "B站知识区排行榜: ValueError: public feed response code -352"
+    "YouTube：小Lin说: ValueError: feed channel ID mismatch",
+    "YouTube：美投讲美股: ValueError: feed channel ID mismatch",
+    "YouTube：一口新飯 MoneyXYZ: ValueError: feed channel ID mismatch",
+    "YouTube：財經M平方: ValueError: feed channel ID mismatch",
+    "YouTube：游庭皓的財經皓角: ValueError: feed channel ID mismatch",
+    "YouTube：懶錢包 Lazy Wallet: ValueError: feed channel ID mismatch",
+    "YouTube：老王愛說笑: ValueError: feed channel ID mismatch"
   ],
   "source_stats": [
     {
@@ -107,26 +112,42 @@
       "status": "ok"
     },
     {
-      "source": "B站财经分区动态",
-      "status": "failed"
-    },
-    {
-      "source": "B站知识区排行榜",
-      "status": "failed"
-    },
-    {
-      "source": "B站全站热门补充",
+      "source": "B站全站热门（财经过滤）",
       "fetched": 50,
       "matched_new": 0,
       "status": "ok"
     },
     {
       "source": "YouTube：小Lin说",
-      "fetched": 15,
-      "matched_new": 4,
-      "status": "ok"
+      "status": "failed"
+    },
+    {
+      "source": "YouTube：美投讲美股",
+      "status": "failed"
+    },
+    {
+      "source": "YouTube：一口新飯 MoneyXYZ",
+      "status": "failed"
+    },
+    {
+      "source": "YouTube：財經M平方",
+      "status": "failed"
+    },
+    {
+      "source": "YouTube：游庭皓的財經皓角",
+      "status": "failed"
+    },
+    {
+      "source": "YouTube：懶錢包 Lazy Wallet",
+      "status": "failed"
+    },
+    {
+      "source": "YouTube：老王愛說笑",
+      "status": "failed"
     }
   ],
-  "data_stale": false,
-  "coverage": "B站财经分区与公开榜单 + 指定财经创作者 YouTube 频道RSS；不是全平台热榜，缺失互动指标不补造"
+  "data_stale": true,
+  "coverage": "B站财经分区与公开榜单 + 指定财经创作者 YouTube 频道RSS；不是全平台热榜，缺失互动指标不补造",
+  "last_attempt_at": "2026-10-27T20:30:33.196507+00:00",
+  "stale_reason": "本轮无匹配视频；保留历史快照，未伪装为最新数据"
 }
