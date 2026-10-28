@@ -1677,7 +1677,16 @@
       "platform_heat_group": "YouTube / 31-180天"
     }
   ],
-  "errors": [],
+  "errors": [
+    "YouTube：小Lin说: HTTPError: HTTP Error 404: Not Found",
+    "YouTube：美投讲美股: HTTPError: HTTP Error 404: Not Found",
+    "YouTube：一口新飯 MoneyXYZ: HTTPError: HTTP Error 404: Not Found",
+    "YouTube：財經M平方: HTTPError: HTTP Error 404: Not Found",
+    "YouTube：游庭皓的財經皓角: HTTPError: HTTP Error 404: Not Found",
+    "YouTube：懶錢包 Lazy Wallet: HTTPError: HTTP Error 404: Not Found",
+    "YouTube：老王愛說笑: HTTPError: HTTP Error 404: Not Found",
+    "YouTube：投資好朋友 BOS價值投資: HTTPError: HTTP Error 404: Not Found"
+  ],
   "source_stats": [
     {
       "source": "B站财经分区近期投稿",
@@ -1693,51 +1702,35 @@
     },
     {
       "source": "YouTube：小Lin说",
-      "fetched": 15,
-      "matched_new": 2,
-      "status": "ok"
+      "status": "failed"
     },
     {
       "source": "YouTube：美投讲美股",
-      "fetched": 15,
-      "matched_new": 9,
-      "status": "ok"
+      "status": "failed"
     },
     {
       "source": "YouTube：一口新飯 MoneyXYZ",
-      "fetched": 15,
-      "matched_new": 2,
-      "status": "ok"
+      "status": "failed"
     },
     {
       "source": "YouTube：財經M平方",
-      "fetched": 15,
-      "matched_new": 9,
-      "status": "ok"
+      "status": "failed"
     },
     {
       "source": "YouTube：游庭皓的財經皓角",
-      "fetched": 15,
-      "matched_new": 8,
-      "status": "ok"
+      "status": "failed"
     },
     {
       "source": "YouTube：懶錢包 Lazy Wallet",
-      "fetched": 15,
-      "matched_new": 11,
-      "status": "ok"
+      "status": "failed"
     },
     {
       "source": "YouTube：老王愛說笑",
-      "fetched": 15,
-      "matched_new": 5,
-      "status": "ok"
+      "status": "failed"
     },
     {
       "source": "YouTube：投資好朋友 BOS價值投資",
-      "fetched": 15,
-      "matched_new": 8,
-      "status": "ok"
+      "status": "failed"
     }
   ],
   "quality": {
@@ -1753,8 +1746,10 @@
     "sources_ok": 10,
     "sources_failed": 0
   },
-  "data_stale": false,
+  "data_stale": true,
   "coverage": "创作者观察名单，不是全网视频搜索或热榜；视频形式仅由标题推断；未人工核验。",
   "metric_note": "YouTube RSS 可能提供播放量（media:statistics），但不提供可直接计算互动率的完整赞/评论；可选官方 Data API 获取公开统计。B站可得点赞/评论/收藏/分享。不同口径不可跨平台比较。",
-  "heat_note": "同平台、同发布时间分组(0-7/8-30/31-180天)至少3条有播放量视频时，播放量/组内中位数；仅为样本内相对值，不是平台全站热度。"
+  "heat_note": "同平台、同发布时间分组(0-7/8-30/31-180天)至少3条有播放量视频时，播放量/组内中位数；仅为样本内相对值，不是平台全站热度。",
+  "last_attempt_at": "2026-10-28T06:53:01.528664+00:00",
+  "stale_reason": "本轮无匹配视频；保留历史快照，未伪装为最新数据"
 }
